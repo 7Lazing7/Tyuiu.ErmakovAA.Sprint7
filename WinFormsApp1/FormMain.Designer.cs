@@ -113,7 +113,7 @@ namespace WinFormsApp1
             ToolStripMenuAbout_SBI.Name = "ToolStripMenuAbout_SBI";
             ToolStripMenuAbout_SBI.Size = new Size(149, 22);
             ToolStripMenuAbout_SBI.Text = "О программе";
-            ToolStripMenuAbout_SBI.Click += ToolStripMenuAbout_SBI_Click;
+         
             // 
             // toolStripSeparator1
             // 
@@ -254,7 +254,7 @@ namespace WinFormsApp1
             buttonOpenRoute_SBI.TabIndex = 3;
             toolTip_SBI.SetToolTip(buttonOpenRoute_SBI, "Посмотреть карту маршрута");
             buttonOpenRoute_SBI.UseVisualStyleBackColor = true;
-            buttonOpenRoute_SBI.Click += buttonOpenRoute_SBI_Click;
+           
             buttonOpenRoute_SBI.MouseEnter += buttonOpenRoute_SBI_MouseEnter;
             // 
             // groupBox1
@@ -279,7 +279,7 @@ namespace WinFormsApp1
             buttonHelp_SBI.TabIndex = 3;
             toolTip_SBI.SetToolTip(buttonHelp_SBI, "Как создать свой файл маршрутов");
             buttonHelp_SBI.UseVisualStyleBackColor = true;
-            buttonHelp_SBI.Click += buttonHelp_SBI_Click;
+           
             buttonHelp_SBI.MouseEnter += buttonHelp_SBI_MouseEnter;
             // 
             // groupBoxFile_SBI

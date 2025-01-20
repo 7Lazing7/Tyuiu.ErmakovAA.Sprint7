@@ -48,6 +48,13 @@ namespace Tyuiu.ErmakovAA.Sprint7.V13
             buttonInfoMe_EAA = new Button();
             groupBoxData_EAA = new GroupBox();
             dataGridViewIn_EAA = new DataGridView();
+            Номер = new DataGridViewTextBoxColumn();
+            Имя = new DataGridViewTextBoxColumn();
+            столица = new DataGridViewTextBoxColumn();
+            площадь = new DataGridViewTextBoxColumn();
+            население = new DataGridViewTextBoxColumn();
+            национальность = new DataGridViewTextBoxColumn();
+            экономика = new DataGridViewTextBoxColumn();
             buttonAdd_EAA = new Button();
             groupBoxSearch_EAA = new GroupBox();
             textBoxFind_EAA = new TextBox();
@@ -173,18 +180,59 @@ namespace Tyuiu.ErmakovAA.Sprint7.V13
             // 
             // dataGridViewIn_EAA
             // 
+            dataGridViewIn_EAA.AllowUserToOrderColumns = true;
             dataGridViewIn_EAA.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewIn_EAA.Columns.AddRange(new DataGridViewColumn[] { Номер, Имя, столица, площадь, население, национальность, экономика });
             dataGridViewIn_EAA.Location = new Point(8, 22);
             dataGridViewIn_EAA.Margin = new Padding(4, 3, 4, 3);
             dataGridViewIn_EAA.Name = "dataGridViewIn_EAA";
+            dataGridViewIn_EAA.RowHeadersVisible = false;
             dataGridViewIn_EAA.Size = new Size(652, 430);
             dataGridViewIn_EAA.TabIndex = 0;
+            dataGridViewIn_EAA.CellContentClick += dataGridViewIn_EAA_CellContentClick;
+            // 
+            // Номер
+            // 
+            Номер.HeaderText = "№";
+            Номер.Name = "Номер";
+            Номер.Width = 50;
+            // 
+            // Имя
+            // 
+            Имя.HeaderText = "Страна";
+            Имя.Name = "Имя";
+            // 
+            // столица
+            // 
+            столица.HeaderText = "Столица";
+            столица.Name = "столица";
+            // 
+            // площадь
+            // 
+            площадь.HeaderText = "Площадь";
+            площадь.Name = "площадь";
+            // 
+            // население
+            // 
+            население.HeaderText = " Население";
+            население.Name = "население";
+            // 
+            // национальность
+            // 
+            национальность.HeaderText = " Национальность";
+            национальность.Name = "национальность";
+            // 
+            // экономика
+            // 
+            экономика.HeaderText = "Экономика";
+            экономика.Name = "экономика";
             // 
             // buttonAdd_EAA
             // 
             buttonAdd_EAA.BackColor = Color.LightGray;
             buttonAdd_EAA.Cursor = Cursors.Hand;
             buttonAdd_EAA.Font = new Font("Yu Gothic UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            buttonAdd_EAA.Image = (Image)resources.GetObject("buttonAdd_EAA.Image");
             buttonAdd_EAA.Location = new Point(10, 16);
             buttonAdd_EAA.Margin = new Padding(4, 3, 4, 3);
             buttonAdd_EAA.Name = "buttonAdd_EAA";
@@ -251,26 +299,26 @@ namespace Tyuiu.ErmakovAA.Sprint7.V13
             // toolStripMenuItem2
             // 
             toolStripMenuItem2.Name = "toolStripMenuItem2";
-            toolStripMenuItem2.Size = new Size(180, 22);
+            toolStripMenuItem2.Size = new Size(149, 22);
             toolStripMenuItem2.Text = "О программе";
             toolStripMenuItem2.Click += buttonInfoMe_EAA_Click;
             // 
             // buttonSearch_SBI
             // 
             buttonSearch_SBI.Name = "buttonSearch_SBI";
-            buttonSearch_SBI.Size = new Size(180, 22);
+            buttonSearch_SBI.Size = new Size(149, 22);
             buttonSearch_SBI.Text = "Руководство";
             buttonSearch_SBI.Click += buttonHelp_SBI_Click;
             // 
             // toolStripSeparator2
             // 
             toolStripSeparator2.Name = "toolStripSeparator2";
-            toolStripSeparator2.Size = new Size(177, 6);
+            toolStripSeparator2.Size = new Size(146, 6);
             // 
             // ToolStripMenuExit_EAA
             // 
             ToolStripMenuExit_EAA.Name = "ToolStripMenuExit_EAA";
-            ToolStripMenuExit_EAA.Size = new Size(180, 22);
+            ToolStripMenuExit_EAA.Size = new Size(149, 22);
             ToolStripMenuExit_EAA.Text = "Выход";
             ToolStripMenuExit_EAA.Click += ToolStripMenuExit_EAA_Click;
             // 
@@ -368,5 +416,12 @@ namespace Tyuiu.ErmakovAA.Sprint7.V13
         private ToolStripMenuItem toolStripMenuItem9;
         private ToolStripMenuItem toolStripMenuItem10;
         private ToolStripMenuItem buttonSearch_SBI;
+        private DataGridViewTextBoxColumn Номер;
+        private DataGridViewTextBoxColumn Имя;
+        private DataGridViewTextBoxColumn столица;
+        private DataGridViewTextBoxColumn площадь;
+        private DataGridViewTextBoxColumn население;
+        private DataGridViewTextBoxColumn национальность;
+        private DataGridViewTextBoxColumn экономика;
     }
 }

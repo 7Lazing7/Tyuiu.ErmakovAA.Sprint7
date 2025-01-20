@@ -210,5 +210,10 @@ namespace Tyuiu.ErmakovAA.Sprint7.V13
         {
 
         }
+
+        private void dataGridViewIn_EAA_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
