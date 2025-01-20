@@ -1,3 +1,13 @@
+﻿using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using System.IO;
+using Tyuiu.ErmakovAA.Sprint7.V13.Lib;
 ﻿namespace Tyuiu.ErmakovAA.Sprint7.V13
 {
     partial class FormMain
@@ -45,10 +55,9 @@
             saveFileDialog_EAA = new SaveFileDialog();
             toolTip_EAA = new ToolTip(components);
             groupBox1 = new GroupBox();
-            menuStrip1 = new MenuStrip();
             ToolStripMenuItemProgramm_EAA = new ToolStripMenuItem();
             toolStripMenuItem2 = new ToolStripMenuItem();
-            buttonSearch_SBI = new ToolStripMenuItem();
+            buttonSearch_EAA = new ToolStripMenuItem();
             toolStripSeparator2 = new ToolStripSeparator();
             ToolStripMenuExit_EAA = new ToolStripMenuItem();
             ToolStripMenuItemFile_EAA = new ToolStripMenuItem();
@@ -84,7 +93,6 @@
             // 
             panelDown_EAA.Controls.Add(buttonSortData_EAA);
             panelDown_EAA.Controls.Add(buttonSortAlp_EAA);
-            panelDown_EAA.Controls.Add(buttonStat_EAA);
             panelDown_EAA.Dock = DockStyle.Bottom;
             panelDown_EAA.Location = new Point(0, 404);
             panelDown_EAA.Margin = new Padding(4, 3, 4, 3);
@@ -121,18 +129,44 @@
             // 
             // buttonStat_EAA
             // 
-            buttonStat_EAA.BackColor = Color.DarkGray;
+            buttonStat_EAA.BackColor = Color.LightGray;
             buttonStat_EAA.Font = new Font("Yu Gothic UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 204);
             buttonStat_EAA.Location = new Point(14, 33);
             buttonStat_EAA.Margin = new Padding(4, 3, 4, 3);
             buttonStat_EAA.Name = "buttonStat_EAA";
-            buttonStat_EAA.Size = new Size(106, 45);
+            buttonStat_EAA.Size = new Size(61, 60);
             buttonStat_EAA.TabIndex = 5;
-            buttonStat_EAA.Text = "Статистика";
             buttonStat_EAA.UseVisualStyleBackColor = false;
             buttonStat_EAA.Click += buttonStat_EAA_Click;
             // 
-            // buttonInfoMe_EAA
+            // groupBoxSearch_SBI
+            // 
+            groupBoxSearch_SBI.Controls.Add(buttonSearch_SBI);
+            groupBoxSearch_SBI.Controls.Add(textBoxSearch_SBI);
+            groupBoxSearch_SBI.Dock = DockStyle.Top;
+            groupBoxSearch_SBI.Location = new Point(5, 0);
+            groupBoxSearch_SBI.Name = "groupBoxSearch_SBI";
+            groupBoxSearch_SBI.Size = new Size(221, 53);
+            groupBoxSearch_SBI.TabIndex = 0;
+            groupBoxSearch_SBI.TabStop = false;
+            groupBoxSearch_SBI.Text = "Поиск";
+            // 
+            // buttonSearch_SBI
+            // 
+            buttonSearch_SBI.Location = new Point(175, 11);
+            buttonSearch_SBI.Name = "buttonSearch_SBI";
+            buttonSearch_SBI.Size = new Size(40, 38);
+            buttonSearch_SBI.TabIndex = 4;
+            buttonSearch_SBI.UseVisualStyleBackColor = true;
+            // 
+            // textBoxSearch_SBI
+            // 
+            textBoxSearch_SBI.Location = new Point(6, 24);
+            textBoxSearch_SBI.Name = "textBoxSearch_SBI";
+            textBoxSearch_SBI.Size = new Size(163, 23);
+            textBoxSearch_SBI.TabIndex = 3;
+            // 
+            // ToolStripMenuExit_SBI
             // 
             buttonInfoMe_EAA.Anchor = AnchorStyles.None;
             buttonInfoMe_EAA.BackColor = Color.Gainsboro;
@@ -175,7 +209,6 @@
             // 
             buttonAdd_EAA.BackColor = Color.LightGray;
             buttonAdd_EAA.Font = new Font("Yu Gothic UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            buttonAdd_EAA.Image = (Image)resources.GetObject("buttonAdd_EAA.Image");
             buttonAdd_EAA.Location = new Point(10, 16);
             buttonAdd_EAA.Margin = new Padding(4, 3, 4, 3);
             buttonAdd_EAA.Name = "buttonAdd_EAA";
@@ -235,19 +268,10 @@
             groupBox1.Text = "Файл";
             groupBox1.Enter += groupBox1_Enter;
             // 
-            // menuStrip1
-            // 
-            menuStrip1.Items.AddRange(new ToolStripItem[] { ToolStripMenuItemProgramm_EAA, ToolStripMenuItemFile_EAA });
-            menuStrip1.Location = new Point(0, 0);
-            menuStrip1.Name = "menuStrip1";
-            menuStrip1.RenderMode = ToolStripRenderMode.System;
             menuStrip1.Size = new Size(933, 24);
-            menuStrip1.TabIndex = 7;
-            menuStrip1.Text = "menuStrip1";
-            // 
             // ToolStripMenuItemProgramm_EAA
             // 
-            ToolStripMenuItemProgramm_EAA.DropDownItems.AddRange(new ToolStripItem[] { toolStripMenuItem2, buttonSearch_SBI, toolStripSeparator2, ToolStripMenuExit_EAA });
+            ToolStripMenuItemProgramm_EAA.DropDownItems.AddRange(new ToolStripItem[] { toolStripMenuItem2, buttonSearch_EAA, toolStripSeparator2, ToolStripMenuExit_EAA });
             ToolStripMenuItemProgramm_EAA.Name = "ToolStripMenuItemProgramm_EAA";
             ToolStripMenuItemProgramm_EAA.Size = new Size(84, 20);
             ToolStripMenuItemProgramm_EAA.Text = "Программа";
