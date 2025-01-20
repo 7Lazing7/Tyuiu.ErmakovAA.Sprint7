@@ -1,4 +1,8 @@
-﻿namespace WinFormsApp1
+﻿using static System.Net.Mime.MediaTypeNames;
+using System.Windows.Forms;
+using System.Xml.Linq;
+
+namespace WinFormsApp1
 {
     partial class FormMain
     {
@@ -29,6 +33,7 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             menuStrip_SBI = new MenuStrip();
             ToolStripMenuItemProgramm_SBI = new ToolStripMenuItem();
             ToolStripMenuAbout_SBI = new ToolStripMenuItem();
@@ -109,6 +114,7 @@
             ToolStripMenuAbout_SBI.Name = "ToolStripMenuAbout_SBI";
             ToolStripMenuAbout_SBI.Size = new Size(149, 22);
             ToolStripMenuAbout_SBI.Text = "О программе";
+            ToolStripMenuAbout_SBI.Click += ToolStripMenuAbout_SBI_Click;
             // 
             // toolStripSeparator1
             // 
@@ -128,7 +134,6 @@
             ToolStripMenuItemFile_SBI.Name = "ToolStripMenuItemFile_SBI";
             ToolStripMenuItemFile_SBI.Size = new Size(48, 20);
             ToolStripMenuItemFile_SBI.Text = "Файл";
-            ToolStripMenuItemFile_SBI.Click += ToolStripMenuItemFile_SBI_Click;
             // 
             // ToolStripMenuOpenNewFileTool_SBI
             // 
@@ -220,7 +225,6 @@
             // labelRowFocusIndex_SBI
             // 
             labelRowFocusIndex_SBI.AutoSize = true;
-            labelRowFocusIndex_SBI.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
             labelRowFocusIndex_SBI.Location = new Point(166, 37);
             labelRowFocusIndex_SBI.Name = "labelRowFocusIndex_SBI";
             labelRowFocusIndex_SBI.Size = new Size(0, 25);
@@ -238,9 +242,11 @@
             toolTip_SBI.SetToolTip(buttonSetFeature_SBI, "Добавить маршрут в избранное");
             buttonSetFeature_SBI.UseVisualStyleBackColor = true;
             buttonSetFeature_SBI.Click += buttonSetFeature_SBI_Click;
+            buttonSetFeature_SBI.MouseEnter += buttonSetFeature_SBI_MouseEnter;
             // 
             // buttonOpenRoute_SBI
             // 
+            
             buttonOpenRoute_SBI.BackgroundImageLayout = ImageLayout.Center;
             buttonOpenRoute_SBI.Enabled = false;
             buttonOpenRoute_SBI.Location = new Point(3, 20);
@@ -249,6 +255,8 @@
             buttonOpenRoute_SBI.TabIndex = 3;
             toolTip_SBI.SetToolTip(buttonOpenRoute_SBI, "Посмотреть карту маршрута");
             buttonOpenRoute_SBI.UseVisualStyleBackColor = true;
+            buttonOpenRoute_SBI.Click += buttonOpenRoute_SBI_Click;
+            buttonOpenRoute_SBI.MouseEnter += buttonOpenRoute_SBI_MouseEnter;
             // 
             // groupBox1
             // 
@@ -263,6 +271,7 @@
             // 
             // buttonHelpImages_SBI
             // 
+           
             buttonHelpImages_SBI.BackgroundImageLayout = ImageLayout.Center;
             buttonHelpImages_SBI.Location = new Point(118, 16);
             buttonHelpImages_SBI.Name = "buttonHelpImages_SBI";
@@ -270,9 +279,12 @@
             buttonHelpImages_SBI.TabIndex = 4;
             toolTip_SBI.SetToolTip(buttonHelpImages_SBI, "Как сделать отображение фото остановок\r\n");
             buttonHelpImages_SBI.UseVisualStyleBackColor = true;
+            buttonHelpImages_SBI.Click += buttonHelpImages_SBI_Click;
+            buttonHelpImages_SBI.MouseEnter += buttonHelpImages_SBI_MouseEnter;
             // 
             // buttonHelp_SBI
             // 
+            
             buttonHelp_SBI.BackgroundImageLayout = ImageLayout.Center;
             buttonHelp_SBI.Location = new Point(38, 16);
             buttonHelp_SBI.Name = "buttonHelp_SBI";
@@ -280,6 +292,8 @@
             buttonHelp_SBI.TabIndex = 3;
             toolTip_SBI.SetToolTip(buttonHelp_SBI, "Как создать свой файл маршрутов");
             buttonHelp_SBI.UseVisualStyleBackColor = true;
+            buttonHelp_SBI.Click += buttonHelp_SBI_Click;
+            buttonHelp_SBI.MouseEnter += buttonHelp_SBI_MouseEnter;
             // 
             // groupBoxFile_SBI
             // 
@@ -296,6 +310,7 @@
             // 
             // buttonUpdateFile_SBI
             // 
+            
             buttonUpdateFile_SBI.BackgroundImageLayout = ImageLayout.Center;
             buttonUpdateFile_SBI.Enabled = false;
             buttonUpdateFile_SBI.Location = new Point(148, 16);
@@ -305,9 +320,11 @@
             toolTip_SBI.SetToolTip(buttonUpdateFile_SBI, "Обновить содержимое файла");
             buttonUpdateFile_SBI.UseVisualStyleBackColor = true;
             buttonUpdateFile_SBI.Click += buttonUpdateFile_SBI_Click;
+            buttonUpdateFile_SBI.MouseEnter += buttonUpdateFile_SBI_MouseEnter;
             // 
             // buttonSaveFile_SBI
             // 
+            
             buttonSaveFile_SBI.BackgroundImageLayout = ImageLayout.Center;
             buttonSaveFile_SBI.Enabled = false;
             buttonSaveFile_SBI.Location = new Point(77, 16);
@@ -317,9 +334,11 @@
             toolTip_SBI.SetToolTip(buttonSaveFile_SBI, "Сохранить файл");
             buttonSaveFile_SBI.UseVisualStyleBackColor = true;
             buttonSaveFile_SBI.Click += buttonSaveFile_SBI_Click;
+            buttonSaveFile_SBI.MouseEnter += buttonSaveFile_SBI_MouseEnter;
             // 
             // buttonOpenFile_SBI
             // 
+            
             buttonOpenFile_SBI.BackgroundImageLayout = ImageLayout.Center;
             buttonOpenFile_SBI.Location = new Point(6, 16);
             buttonOpenFile_SBI.Name = "buttonOpenFile_SBI";
@@ -328,6 +347,7 @@
             toolTip_SBI.SetToolTip(buttonOpenFile_SBI, "Открыть файл маршрутов (.csv)");
             buttonOpenFile_SBI.UseVisualStyleBackColor = true;
             buttonOpenFile_SBI.Click += buttonOpenFile_SBI_Click;
+            buttonOpenFile_SBI.MouseEnter += buttonOpenFile_SBI_MouseEnter;
             // 
             // groupBoxSearch_SBI
             // 
@@ -343,6 +363,7 @@
             // 
             // buttonSearch_SBI
             // 
+            
             buttonSearch_SBI.Location = new Point(175, 11);
             buttonSearch_SBI.Name = "buttonSearch_SBI";
             buttonSearch_SBI.Size = new Size(40, 38);
@@ -358,6 +379,7 @@
             textBoxSearch_SBI.Size = new Size(163, 23);
             textBoxSearch_SBI.TabIndex = 3;
             toolTip_SBI.SetToolTip(textBoxSearch_SBI, "Введите номер маршрута");
+            textBoxSearch_SBI.MouseEnter += textBoxSearch_SBI_MouseEnter;
             // 
             // tabControlRoutes_SBI
             // 
@@ -507,6 +529,7 @@
             Controls.Add(tableLayoutPanel_SBI);
             Controls.Add(menuStrip_SBI);
             FormBorderStyle = FormBorderStyle.Fixed3D;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             MainMenuStrip = menuStrip_SBI;
             MinimumSize = new Size(820, 493);
             Name = "FormMain";

@@ -174,6 +174,7 @@ namespace Tyuiu.ErmakovAA.Sprint7.V13
             }
         }
 
+
         private void buttonStat_EAA_Click(object sender, EventArgs e)
         {
             FormStatic formstat = new FormStatic();
@@ -199,7 +200,10 @@ namespace Tyuiu.ErmakovAA.Sprint7.V13
         {
             Close();
         }
-   
-    
+
+        private void toolStripMenuItem8_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -8,18 +8,21 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Tyuiu.ErmakovAA.Sprint7.V13
+namespace WinFormsApp1
 {
-    public partial class FormGeography : Form
+    public partial class FormAbout : Form
     {
-        public FormGeography()
+        public FormAbout()
         {
             InitializeComponent();
         }
 
-        private void textBoxGuide_EAA_Enter(object sender, EventArgs e)
+        private void FormAbout_Load(object sender, EventArgs e)
         {
-            this.ActiveControl = null;
+            this.BeginInvoke(new Action(() =>
+            {
+                ActiveControl = null;
+            }));
         }
     }
 }

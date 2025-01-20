@@ -33,7 +33,11 @@ namespace WinFormsApp1
             dataGridViewFeatures_SBI.RowCount = 14;
         }
 
-
+        private void ToolStripMenuAbout_SBI_Click(object sender, EventArgs e)
+        {
+            FormAbout formAbout = new FormAbout();
+            formAbout.ShowDialog();
+        }
 
         private void ToolStripMenuExit_SBI_Click(object sender, EventArgs e)
         {
@@ -48,7 +52,7 @@ namespace WinFormsApp1
             if (File.Exists(openFileDialog_SBI.FileName))
             {
                 openFilePath = openFileDialog_SBI.FileName;
-
+                items = dataService.ParseRouteItems(openFilePath);
 
                 for (int i = 0; i < items.Count; i++)
                 {
@@ -141,7 +145,7 @@ namespace WinFormsApp1
 
         private void buttonUpdateFile_SBI_Click(object sender, EventArgs e)
         {
-
+            items = dataService.ParseRouteItems(openFilePath);
             SetItemsToGrid(items);
         }
 
@@ -223,7 +227,12 @@ namespace WinFormsApp1
             txt.Start();
         }
 
-
+        private void buttonOpenRoute_SBI_Click(object sender, EventArgs e)
+        {
+            FormRoute formRoute = new FormRoute(items[rowFocusIndex]);
+            formRoute.Text = "Ìàðøðóò " + GetCurrentDataGridView().CurrentRow.Cells[0].Value;
+            formRoute.ShowDialog();
+        }
 
         private DataGridView GetCurrentDataGridView()
         {
@@ -235,11 +244,23 @@ namespace WinFormsApp1
             FolderBrowserDialog dialog = new FolderBrowserDialog();
             if (dialog.ShowDialog() == DialogResult.OK)
             {
-
+                if (Directory.Exists(dialog.SelectedPath))
+                {
+                    DataService.imagesFolder = dialog.SelectedPath;
+                }
             }
         }
+        private void buttonHelpImages_SBI_Click(object sender, EventArgs e)
+        {
+            FormGuideImage formGuideImage = new FormGuideImage();
+            formGuideImage.ShowDialog();
+        }
 
-
+        private void buttonHelp_SBI_Click(object sender, EventArgs e)
+        {
+            FormGuide formGuide = new FormGuide();
+            formGuide.ShowDialog();
+        }
 
         #region MouseEnterTips
         private void buttonOpenFile_SBI_MouseEnter(object sender, EventArgs e)
@@ -282,14 +303,5 @@ namespace WinFormsApp1
         }
         #endregion
 
-        private void ToolStripMenuItemProgramm_SBI_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ToolStripMenuItemFile_SBI_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

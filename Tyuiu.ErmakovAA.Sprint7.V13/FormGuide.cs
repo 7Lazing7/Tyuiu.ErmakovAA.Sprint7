@@ -10,20 +10,16 @@ using System.Windows.Forms;
 
 namespace Tyuiu.ErmakovAA.Sprint7.V13
 {
-    public partial class FormGeographyImage : Form
+    public partial class FormGuide : Form
     {
-        public FormGeographyImage()
+        public FormGuide()
         {
             InitializeComponent();
         }
-        public void textBoxGuideImage_EAA_Enter(object sender, EventArgs e)
+
+        private void textBoxGuide_SBI_Enter(object sender, EventArgs e)
         {
             this.ActiveControl = null;
-        }
-
-        private void textBoxGuideImage_EAA_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }
