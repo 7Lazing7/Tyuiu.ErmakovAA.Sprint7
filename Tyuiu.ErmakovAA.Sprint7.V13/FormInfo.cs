@@ -25,14 +25,13 @@ namespace Tyuiu.ErmakovAA.Sprint7.V13
             }));
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void pictureBoxME_EAA_Click(object sender, EventArgs e)
         {
 
+        }
+        private void ToolStripMenuExit_EAA_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

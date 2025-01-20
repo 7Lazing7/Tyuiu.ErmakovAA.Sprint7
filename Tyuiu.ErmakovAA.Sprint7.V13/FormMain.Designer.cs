@@ -104,10 +104,10 @@ namespace Tyuiu.ErmakovAA.Sprint7.V13
             // 
             buttonFirma_EAA.BackColor = Color.LightGray;
             buttonFirma_EAA.Font = new Font("Yu Gothic UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 204);
-            buttonFirma_EAA.Location = new Point(63, 408);
+            buttonFirma_EAA.Location = new Point(13, 342);
             buttonFirma_EAA.Margin = new Padding(4, 3, 4, 3);
             buttonFirma_EAA.Name = "buttonFirma_EAA";
-            buttonFirma_EAA.Size = new Size(114, 61);
+            buttonFirma_EAA.Size = new Size(127, 61);
             buttonFirma_EAA.TabIndex = 5;
             buttonFirma_EAA.Text = "Существующие фирмы";
             buttonFirma_EAA.UseVisualStyleBackColor = false;
@@ -121,7 +121,7 @@ namespace Tyuiu.ErmakovAA.Sprint7.V13
             buttonSortAlp_EAA.Location = new Point(13, 289);
             buttonSortAlp_EAA.Margin = new Padding(4, 3, 4, 3);
             buttonSortAlp_EAA.Name = "buttonSortAlp_EAA";
-            buttonSortAlp_EAA.Size = new Size(120, 47);
+            buttonSortAlp_EAA.Size = new Size(127, 47);
             buttonSortAlp_EAA.TabIndex = 6;
             buttonSortAlp_EAA.Text = "Отсортировать\r\n по алфавиту";
             buttonSortAlp_EAA.UseVisualStyleBackColor = false;
@@ -251,27 +251,28 @@ namespace Tyuiu.ErmakovAA.Sprint7.V13
             // toolStripMenuItem2
             // 
             toolStripMenuItem2.Name = "toolStripMenuItem2";
-            toolStripMenuItem2.Size = new Size(149, 22);
+            toolStripMenuItem2.Size = new Size(180, 22);
             toolStripMenuItem2.Text = "О программе";
             toolStripMenuItem2.Click += buttonInfoMe_EAA_Click;
             // 
             // buttonSearch_SBI
             // 
             buttonSearch_SBI.Name = "buttonSearch_SBI";
-            buttonSearch_SBI.Size = new Size(149, 22);
+            buttonSearch_SBI.Size = new Size(180, 22);
             buttonSearch_SBI.Text = "Руководство";
             buttonSearch_SBI.Click += buttonHelp_SBI_Click;
             // 
             // toolStripSeparator2
             // 
             toolStripSeparator2.Name = "toolStripSeparator2";
-            toolStripSeparator2.Size = new Size(146, 6);
+            toolStripSeparator2.Size = new Size(177, 6);
             // 
             // ToolStripMenuExit_EAA
             // 
             ToolStripMenuExit_EAA.Name = "ToolStripMenuExit_EAA";
-            ToolStripMenuExit_EAA.Size = new Size(149, 22);
+            ToolStripMenuExit_EAA.Size = new Size(180, 22);
             ToolStripMenuExit_EAA.Text = "Выход";
+            ToolStripMenuExit_EAA.Click += ToolStripMenuExit_EAA_Click;
             // 
             // ToolStripMenuItemFile_EAA
             // 

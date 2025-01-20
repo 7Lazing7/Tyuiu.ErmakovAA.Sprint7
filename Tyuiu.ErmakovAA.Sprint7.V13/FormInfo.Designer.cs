@@ -57,7 +57,7 @@ namespace Tyuiu.ErmakovAA.Sprint7.V13
             buttonClose_EAA.TabIndex = 1;
             buttonClose_EAA.Text = "OK";
             buttonClose_EAA.UseVisualStyleBackColor = true;
-            buttonClose_EAA.Click += textBox1_TextChanged;
+            buttonClose_EAA.Click += ToolStripMenuExit_EAA_Click;
             // 
             // pictureBoxME_EAA
             // 
