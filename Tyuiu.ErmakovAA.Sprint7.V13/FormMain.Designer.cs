@@ -91,7 +91,7 @@ namespace Tyuiu.ErmakovAA.Sprint7.V13
             // 
             buttonSortData_EAA.BackColor = Color.Gray;
             buttonSortData_EAA.Font = new Font("Yu Gothic UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 204);
-            buttonSortData_EAA.Location = new Point(108, 236);
+            buttonSortData_EAA.Location = new Point(13, 236);
             buttonSortData_EAA.Margin = new Padding(4, 3, 4, 3);
             buttonSortData_EAA.Name = "buttonSortData_EAA";
             buttonSortData_EAA.Size = new Size(127, 47);
@@ -104,7 +104,7 @@ namespace Tyuiu.ErmakovAA.Sprint7.V13
             // 
             buttonFirma_EAA.BackColor = Color.LightGray;
             buttonFirma_EAA.Font = new Font("Yu Gothic UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 204);
-            buttonFirma_EAA.Location = new Point(144, 301);
+            buttonFirma_EAA.Location = new Point(63, 408);
             buttonFirma_EAA.Margin = new Padding(4, 3, 4, 3);
             buttonFirma_EAA.Name = "buttonFirma_EAA";
             buttonFirma_EAA.Size = new Size(114, 61);
@@ -118,7 +118,7 @@ namespace Tyuiu.ErmakovAA.Sprint7.V13
             buttonSortAlp_EAA.BackColor = Color.Gray;
             buttonSortAlp_EAA.Font = new Font("Yu Gothic UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 204);
             buttonSortAlp_EAA.ForeColor = SystemColors.ControlText;
-            buttonSortAlp_EAA.Location = new Point(0, 308);
+            buttonSortAlp_EAA.Location = new Point(13, 289);
             buttonSortAlp_EAA.Margin = new Padding(4, 3, 4, 3);
             buttonSortAlp_EAA.Name = "buttonSortAlp_EAA";
             buttonSortAlp_EAA.Size = new Size(120, 47);
@@ -157,7 +157,7 @@ namespace Tyuiu.ErmakovAA.Sprint7.V13
             buttonInfoMe_EAA.TextAlign = ContentAlignment.BottomCenter;
             buttonInfoMe_EAA.UseMnemonic = false;
             buttonInfoMe_EAA.UseVisualStyleBackColor = false;
-            buttonInfoMe_EAA.Click += buttonInfoMe_EAA_Click;
+            buttonInfoMe_EAA.Click += buttonHelp_SBI_Click;
             // 
             // groupBoxData_EAA
             // 
@@ -251,26 +251,26 @@ namespace Tyuiu.ErmakovAA.Sprint7.V13
             // toolStripMenuItem2
             // 
             toolStripMenuItem2.Name = "toolStripMenuItem2";
-            toolStripMenuItem2.Size = new Size(180, 22);
+            toolStripMenuItem2.Size = new Size(149, 22);
             toolStripMenuItem2.Text = "О программе";
             toolStripMenuItem2.Click += buttonInfoMe_EAA_Click;
             // 
             // buttonSearch_SBI
             // 
             buttonSearch_SBI.Name = "buttonSearch_SBI";
-            buttonSearch_SBI.Size = new Size(180, 22);
+            buttonSearch_SBI.Size = new Size(149, 22);
             buttonSearch_SBI.Text = "Руководство";
-            buttonSearch_SBI.Click += buttonInfoMe_EAA_Click;
+            buttonSearch_SBI.Click += buttonHelp_SBI_Click;
             // 
             // toolStripSeparator2
             // 
             toolStripSeparator2.Name = "toolStripSeparator2";
-            toolStripSeparator2.Size = new Size(177, 6);
+            toolStripSeparator2.Size = new Size(146, 6);
             // 
             // ToolStripMenuExit_EAA
             // 
             ToolStripMenuExit_EAA.Name = "ToolStripMenuExit_EAA";
-            ToolStripMenuExit_EAA.Size = new Size(180, 22);
+            ToolStripMenuExit_EAA.Size = new Size(149, 22);
             ToolStripMenuExit_EAA.Text = "Выход";
             // 
             // ToolStripMenuItemFile_EAA

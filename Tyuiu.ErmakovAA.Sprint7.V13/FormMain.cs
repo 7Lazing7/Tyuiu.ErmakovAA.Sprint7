@@ -173,6 +173,11 @@ namespace Tyuiu.ErmakovAA.Sprint7.V13
                 txt.Start();
             }
         }
+        private void buttonHelp_SBI_Click(object sender, EventArgs e)
+        {
+            FormGuide formGuide = new FormGuide();
+            formGuide.ShowDialog();
+        }
 
 
         private void buttonStat_EAA_Click(object sender, EventArgs e)

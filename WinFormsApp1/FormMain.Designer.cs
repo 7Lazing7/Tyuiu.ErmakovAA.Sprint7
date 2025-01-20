@@ -53,7 +53,6 @@ namespace WinFormsApp1
             buttonSetFeature_SBI = new Button();
             buttonOpenRoute_SBI = new Button();
             groupBox1 = new GroupBox();
-            buttonHelpImages_SBI = new Button();
             buttonHelp_SBI = new Button();
             groupBoxFile_SBI = new GroupBox();
             buttonUpdateFile_SBI = new Button();
@@ -260,7 +259,7 @@ namespace WinFormsApp1
             // 
             // groupBox1
             // 
-            groupBox1.Controls.Add(buttonHelpImages_SBI);
+      
             groupBox1.Controls.Add(buttonHelp_SBI);
             groupBox1.Location = new Point(5, 319);
             groupBox1.Name = "groupBox1";
@@ -268,19 +267,7 @@ namespace WinFormsApp1
             groupBox1.TabIndex = 3;
             groupBox1.TabStop = false;
             groupBox1.Text = "Руководство";
-            // 
-            // buttonHelpImages_SBI
-            // 
-           
-            buttonHelpImages_SBI.BackgroundImageLayout = ImageLayout.Center;
-            buttonHelpImages_SBI.Location = new Point(118, 16);
-            buttonHelpImages_SBI.Name = "buttonHelpImages_SBI";
-            buttonHelpImages_SBI.Size = new Size(65, 65);
-            buttonHelpImages_SBI.TabIndex = 4;
-            toolTip_SBI.SetToolTip(buttonHelpImages_SBI, "Как сделать отображение фото остановок\r\n");
-            buttonHelpImages_SBI.UseVisualStyleBackColor = true;
-            buttonHelpImages_SBI.Click += buttonHelpImages_SBI_Click;
-            buttonHelpImages_SBI.MouseEnter += buttonHelpImages_SBI_MouseEnter;
+
             // 
             // buttonHelp_SBI
             // 
@@ -590,7 +577,6 @@ namespace WinFormsApp1
         private GroupBox groupBoxEdit_SBI;
         private Button buttonSetFeature_SBI;
         private Button buttonOpenRoute_SBI;
-        private Button buttonHelpImages_SBI;
         private OpenFileDialog openFileDialog_SBI;
         private DataGridView dataGridViewFeatures_SBI;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
