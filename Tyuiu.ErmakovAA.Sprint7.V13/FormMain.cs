@@ -148,7 +148,7 @@ namespace Tyuiu.ErmakovAA.Sprint7.V13
             int rows = dataGridViewIn_EAA.RowCount;
             int columns = dataGridViewIn_EAA.ColumnCount;
 
-            string str = "название страны, столица, площадь территории, является ли страна развитой в экономическом отношении, количество населения, преобладающая национальность\n";
+            string str = "Страна, Столица, Площадь, Территория, Экономика, Население, Национальность\n";
             for (int i = 0; i < rows - 1; i++)
             {
                 for (int j = 0; j < columns; j++)
