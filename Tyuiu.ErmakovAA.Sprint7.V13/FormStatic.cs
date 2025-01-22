@@ -9,6 +9,7 @@ namespace Tyuiu.ErmakovAA.Sprint7.V13
     {
         private List<Country> countries = new List<Country>(); // Список для хранения стран
 
+
         public FormStatic()
         {
             InitializeComponent(); // Инициализация компонентов формы
@@ -47,11 +48,18 @@ namespace Tyuiu.ErmakovAA.Sprint7.V13
 
             foreach (Country country in countries)
             {
-                series.Points.AddXY(country.Name, country.Area);
+                DataPoint point = new DataPoint();
+                point.SetValueXY(country.Name, country.Area);
+                point.Label = ""; // Убираем метки с именами стран
+                point.LegendText = country.Name;
+                series.Points.Add(point);
+                chartstat_EAA.Legends[0].Enabled = true;
+               
             }
 
             chartstat_EAA.Series.Add(series);
         }
+
 
         // Обработчик события для вычисления среднего населения
         private void buttonSredOZU_EAA_Click(object sender, EventArgs e)
@@ -107,7 +115,7 @@ namespace Tyuiu.ErmakovAA.Sprint7.V13
         public bool Economicall { get; set; } // Экономическая развитость
         public int Population { get; set; } // Население
         public string Nationality { get; set; } // Преобладающая национальность
-        public string Note { get; set; } // Примечание
+      
     }
 }
 

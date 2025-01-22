@@ -125,14 +125,7 @@ namespace WinFormsApp1
             {
                 for (int j = 0; j < COLUMNS - 1; j++)
                 {
-                    if (j != COLUMNS - 1)
-                    {
-                        str += dataGridViewRoutes_SBI.Rows[i].Cells[j].Value + ";";
-                    }
-                    else
-                    {
-                        str += dataGridViewRoutes_SBI.Rows[i].Cells[j].Value;
-                    }
+                  
                 }
                 File.AppendAllText(path, str + Environment.NewLine);
                 str = "";

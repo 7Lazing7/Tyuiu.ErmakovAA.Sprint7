@@ -33,7 +33,6 @@ namespace WinFormsApp1
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             menuStrip_SBI = new MenuStrip();
             ToolStripMenuItemProgramm_SBI = new ToolStripMenuItem();
             ToolStripMenuAbout_SBI = new ToolStripMenuItem();
@@ -113,7 +112,6 @@ namespace WinFormsApp1
             ToolStripMenuAbout_SBI.Name = "ToolStripMenuAbout_SBI";
             ToolStripMenuAbout_SBI.Size = new Size(149, 22);
             ToolStripMenuAbout_SBI.Text = "О программе";
-         
             // 
             // toolStripSeparator1
             // 
@@ -226,7 +224,7 @@ namespace WinFormsApp1
             labelRowFocusIndex_SBI.AutoSize = true;
             labelRowFocusIndex_SBI.Location = new Point(166, 37);
             labelRowFocusIndex_SBI.Name = "labelRowFocusIndex_SBI";
-            labelRowFocusIndex_SBI.Size = new Size(0, 25);
+            labelRowFocusIndex_SBI.Size = new Size(0, 15);
             labelRowFocusIndex_SBI.TabIndex = 4;
             labelRowFocusIndex_SBI.TextAlign = ContentAlignment.MiddleCenter;
             // 
@@ -245,7 +243,6 @@ namespace WinFormsApp1
             // 
             // buttonOpenRoute_SBI
             // 
-            
             buttonOpenRoute_SBI.BackgroundImageLayout = ImageLayout.Center;
             buttonOpenRoute_SBI.Enabled = false;
             buttonOpenRoute_SBI.Location = new Point(3, 20);
@@ -254,12 +251,10 @@ namespace WinFormsApp1
             buttonOpenRoute_SBI.TabIndex = 3;
             toolTip_SBI.SetToolTip(buttonOpenRoute_SBI, "Посмотреть карту маршрута");
             buttonOpenRoute_SBI.UseVisualStyleBackColor = true;
-           
             buttonOpenRoute_SBI.MouseEnter += buttonOpenRoute_SBI_MouseEnter;
             // 
             // groupBox1
             // 
-      
             groupBox1.Controls.Add(buttonHelp_SBI);
             groupBox1.Location = new Point(5, 319);
             groupBox1.Name = "groupBox1";
@@ -267,19 +262,16 @@ namespace WinFormsApp1
             groupBox1.TabIndex = 3;
             groupBox1.TabStop = false;
             groupBox1.Text = "Руководство";
-
             // 
             // buttonHelp_SBI
             // 
-            
             buttonHelp_SBI.BackgroundImageLayout = ImageLayout.Center;
-            buttonHelp_SBI.Location = new Point(38, 16);
+            buttonHelp_SBI.Location = new Point(15, 18);
             buttonHelp_SBI.Name = "buttonHelp_SBI";
             buttonHelp_SBI.Size = new Size(65, 65);
             buttonHelp_SBI.TabIndex = 3;
             toolTip_SBI.SetToolTip(buttonHelp_SBI, "Как создать свой файл маршрутов");
             buttonHelp_SBI.UseVisualStyleBackColor = true;
-           
             buttonHelp_SBI.MouseEnter += buttonHelp_SBI_MouseEnter;
             // 
             // groupBoxFile_SBI
@@ -297,7 +289,6 @@ namespace WinFormsApp1
             // 
             // buttonUpdateFile_SBI
             // 
-            
             buttonUpdateFile_SBI.BackgroundImageLayout = ImageLayout.Center;
             buttonUpdateFile_SBI.Enabled = false;
             buttonUpdateFile_SBI.Location = new Point(148, 16);
@@ -311,7 +302,6 @@ namespace WinFormsApp1
             // 
             // buttonSaveFile_SBI
             // 
-            
             buttonSaveFile_SBI.BackgroundImageLayout = ImageLayout.Center;
             buttonSaveFile_SBI.Enabled = false;
             buttonSaveFile_SBI.Location = new Point(77, 16);
@@ -325,7 +315,6 @@ namespace WinFormsApp1
             // 
             // buttonOpenFile_SBI
             // 
-            
             buttonOpenFile_SBI.BackgroundImageLayout = ImageLayout.Center;
             buttonOpenFile_SBI.Location = new Point(6, 16);
             buttonOpenFile_SBI.Name = "buttonOpenFile_SBI";
@@ -350,7 +339,6 @@ namespace WinFormsApp1
             // 
             // buttonSearch_SBI
             // 
-            
             buttonSearch_SBI.Location = new Point(175, 11);
             buttonSearch_SBI.Name = "buttonSearch_SBI";
             buttonSearch_SBI.Size = new Size(40, 38);
@@ -516,7 +504,6 @@ namespace WinFormsApp1
             Controls.Add(tableLayoutPanel_SBI);
             Controls.Add(menuStrip_SBI);
             FormBorderStyle = FormBorderStyle.Fixed3D;
-            Icon = (Icon)resources.GetObject("$this.Icon");
             MainMenuStrip = menuStrip_SBI;
             MinimumSize = new Size(820, 493);
             Name = "FormMain";

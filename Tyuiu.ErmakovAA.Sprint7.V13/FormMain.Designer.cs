@@ -48,13 +48,6 @@ namespace Tyuiu.ErmakovAA.Sprint7.V13
             buttonInfoMe_EAA = new Button();
             groupBoxData_EAA = new GroupBox();
             dataGridViewIn_EAA = new DataGridView();
-            Номер = new DataGridViewTextBoxColumn();
-            Имя = new DataGridViewTextBoxColumn();
-            столица = new DataGridViewTextBoxColumn();
-            площадь = new DataGridViewTextBoxColumn();
-            население = new DataGridViewTextBoxColumn();
-            национальность = new DataGridViewTextBoxColumn();
-            экономика = new DataGridViewTextBoxColumn();
             buttonAdd_EAA = new Button();
             groupBoxSearch_EAA = new GroupBox();
             textBoxFind_EAA = new TextBox();
@@ -72,6 +65,12 @@ namespace Tyuiu.ErmakovAA.Sprint7.V13
             toolStripMenuItem8 = new ToolStripMenuItem();
             toolStripMenuItem9 = new ToolStripMenuItem();
             toolStripMenuItem10 = new ToolStripMenuItem();
+            Имя = new DataGridViewTextBoxColumn();
+            столица = new DataGridViewTextBoxColumn();
+            площадь = new DataGridViewTextBoxColumn();
+            население = new DataGridViewTextBoxColumn();
+            национальность = new DataGridViewTextBoxColumn();
+            экономика = new DataGridViewTextBoxColumn();
             groupBoxData_EAA.SuspendLayout();
             ((ISupportInitialize)dataGridViewIn_EAA).BeginInit();
             groupBoxSearch_EAA.SuspendLayout();
@@ -181,7 +180,7 @@ namespace Tyuiu.ErmakovAA.Sprint7.V13
             // 
             dataGridViewIn_EAA.AllowUserToOrderColumns = true;
             dataGridViewIn_EAA.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewIn_EAA.Columns.AddRange(new DataGridViewColumn[] { Номер, Имя, столица, площадь, население, национальность, экономика });
+            dataGridViewIn_EAA.Columns.AddRange(new DataGridViewColumn[] { Имя, столица, площадь, население, национальность, экономика });
             dataGridViewIn_EAA.Location = new Point(8, 22);
             dataGridViewIn_EAA.Margin = new Padding(4, 3, 4, 3);
             dataGridViewIn_EAA.Name = "dataGridViewIn_EAA";
@@ -189,42 +188,6 @@ namespace Tyuiu.ErmakovAA.Sprint7.V13
             dataGridViewIn_EAA.Size = new Size(652, 430);
             dataGridViewIn_EAA.TabIndex = 0;
             dataGridViewIn_EAA.CellContentClick += dataGridViewIn_EAA_CellContentClick;
-            // 
-            // Номер
-            // 
-            Номер.HeaderText = "№";
-            Номер.Name = "Номер";
-            Номер.Width = 50;
-            // 
-            // Имя
-            // 
-            Имя.HeaderText = "Страна";
-            Имя.Name = "Имя";
-            // 
-            // столица
-            // 
-            столица.HeaderText = "Столица";
-            столица.Name = "столица";
-            // 
-            // площадь
-            // 
-            площадь.HeaderText = "Площадь";
-            площадь.Name = "площадь";
-            // 
-            // население
-            // 
-            население.HeaderText = " Население";
-            население.Name = "население";
-            // 
-            // национальность
-            // 
-            национальность.HeaderText = " Национальность";
-            национальность.Name = "национальность";
-            // 
-            // экономика
-            // 
-            экономика.HeaderText = "Экономика";
-            экономика.Name = "экономика";
             // 
             // buttonAdd_EAA
             // 
@@ -287,6 +250,7 @@ namespace Tyuiu.ErmakovAA.Sprint7.V13
             menuStrip1.Size = new Size(933, 24);
             menuStrip1.TabIndex = 7;
             menuStrip1.Text = "menuStrip1";
+            menuStrip1.ItemClicked += menuStrip1_ItemClicked;
             // 
             // ToolStripMenuItemProgramm_EAA
             // 
@@ -356,6 +320,39 @@ namespace Tyuiu.ErmakovAA.Sprint7.V13
             toolStripMenuItem10.Size = new Size(198, 22);
             toolStripMenuItem10.Text = "Открыть данный файл";
             // 
+            // Имя
+            // 
+            Имя.HeaderText = "Страна";
+            Имя.Name = "Имя";
+            // 
+            // столица
+            // 
+            столица.HeaderText = "Столица";
+            столица.Name = "столица";
+            // 
+            // площадь
+            // 
+            площадь.HeaderText = "Площадь";
+            площадь.Name = "площадь";
+            площадь.Width = 110;
+            // 
+            // население
+            // 
+            население.HeaderText = " Население";
+            население.Name = "население";
+            население.Width = 110;
+            // 
+            // национальность
+            // 
+            национальность.HeaderText = " Национальность";
+            национальность.Name = "национальность";
+            национальность.Width = 130;
+            // 
+            // экономика
+            // 
+            экономика.HeaderText = "Экономика";
+            экономика.Name = "экономика";
+            // 
             // FormMain
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -415,7 +412,6 @@ namespace Tyuiu.ErmakovAA.Sprint7.V13
         private ToolStripMenuItem toolStripMenuItem10;
         private ToolStripMenuItem buttonSearch_SBI;
         private DataGridView dataGridViewIn_EAA;
-        private DataGridViewTextBoxColumn Номер;
         private DataGridViewTextBoxColumn Имя;
         private DataGridViewTextBoxColumn столица;
         private DataGridViewTextBoxColumn площадь;

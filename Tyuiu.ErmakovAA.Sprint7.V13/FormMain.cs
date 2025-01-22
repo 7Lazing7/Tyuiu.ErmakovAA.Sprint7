@@ -17,7 +17,7 @@ namespace Tyuiu.ErmakovAA.Sprint7.V13
         public FormMain()
         {
             InitializeComponent();
-            
+
         }
 
         private void buttonInfoMe_EAA_Click(object sender, EventArgs e)
@@ -148,7 +148,7 @@ namespace Tyuiu.ErmakovAA.Sprint7.V13
             int rows = dataGridViewIn_EAA.RowCount;
             int columns = dataGridViewIn_EAA.ColumnCount;
 
-            string str = "Название,Фирма,Процессор,Количество ядер,Объем ОЗУ (ГБ),Диагональ,Дата выпуска\n";
+            string str = "название страны, столица, площадь территории, является ли страна развитой в экономическом отношении, количество населения, преобладающая национальность\n";
             for (int i = 0; i < rows - 1; i++)
             {
                 for (int j = 0; j < columns; j++)
@@ -218,8 +218,10 @@ namespace Tyuiu.ErmakovAA.Sprint7.V13
         {
 
         }
-        
-    
-      
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
     }
 }

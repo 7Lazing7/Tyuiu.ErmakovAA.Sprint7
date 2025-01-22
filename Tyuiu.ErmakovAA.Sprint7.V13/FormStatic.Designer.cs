@@ -32,14 +32,14 @@ namespace Tyuiu.ErmakovAA.Sprint7.V13
             buttonDiag_EAA = new Button();
             buttonMaxYadra_EAA = new Button();
             buttonSredOZU_EAA = new Button();
-            chartstat_EAA = new Chart();
             dataGridViewStat_EAA = new DataGridView();
             textBoxSredOZU_EAA = new TextBox();
             textBoxMaxYadra_EAA = new TextBox();
             openFileDialogStat_EAA = new OpenFileDialog();
+            chartstat_EAA = new Chart();
             panelLeft_EAA.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)chartstat_EAA).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridViewStat_EAA).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)chartstat_EAA).BeginInit();
             SuspendLayout();
             // 
             // panelLeft_EAA
@@ -90,22 +90,6 @@ namespace Tyuiu.ErmakovAA.Sprint7.V13
             buttonSredOZU_EAA.UseVisualStyleBackColor = false;
             buttonSredOZU_EAA.Click += buttonSredOZU_EAA_Click;
             // 
-            // chartstat_EAA
-            // 
-            chartArea1.Name = "ChartArea1";
-            chartstat_EAA.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            chartstat_EAA.Legends.Add(legend1);
-            chartstat_EAA.Location = new Point(24, 14);
-            chartstat_EAA.Margin = new Padding(4, 3, 4, 3);
-            chartstat_EAA.Name = "chartstat_EAA";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            chartstat_EAA.Series.Add(series1);
-            chartstat_EAA.Size = new Size(360, 369);
-            chartstat_EAA.TabIndex = 1;
-            // 
             // dataGridViewStat_EAA
             // 
             dataGridViewStat_EAA.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -113,7 +97,7 @@ namespace Tyuiu.ErmakovAA.Sprint7.V13
             dataGridViewStat_EAA.Margin = new Padding(4, 3, 4, 3);
             dataGridViewStat_EAA.Name = "dataGridViewStat_EAA";
             dataGridViewStat_EAA.RowHeadersVisible = false;
-            dataGridViewStat_EAA.Size = new Size(226, 183);
+            dataGridViewStat_EAA.Size = new Size(226, 218);
             dataGridViewStat_EAA.TabIndex = 2;
             // 
             // textBoxSredOZU_EAA
@@ -136,6 +120,22 @@ namespace Tyuiu.ErmakovAA.Sprint7.V13
             // 
             openFileDialogStat_EAA.FileName = "openFileDialog1";
             // 
+            // chartstat_EAA
+            // 
+            chartArea1.Name = "ChartArea1";
+            chartstat_EAA.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            chartstat_EAA.Legends.Add(legend1);
+            chartstat_EAA.Location = new Point(24, 14);
+            chartstat_EAA.Margin = new Padding(4, 3, 4, 3);
+            chartstat_EAA.Name = "chartstat_EAA";
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            chartstat_EAA.Series.Add(series1);
+            chartstat_EAA.Size = new Size(360, 369);
+            chartstat_EAA.TabIndex = 1;
+            // 
             // FormStatic
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -152,8 +152,8 @@ namespace Tyuiu.ErmakovAA.Sprint7.V13
             Name = "FormStatic";
             Text = "Статистика";
             panelLeft_EAA.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)chartstat_EAA).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridViewStat_EAA).EndInit();
+            ((System.ComponentModel.ISupportInitialize)chartstat_EAA).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -161,7 +161,6 @@ namespace Tyuiu.ErmakovAA.Sprint7.V13
         #endregion
 
         private System.Windows.Forms.Panel panelLeft_EAA;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chartstat_EAA;
         private System.Windows.Forms.Button buttonSredOZU_EAA;
         private System.Windows.Forms.DataGridView dataGridViewStat_EAA;
         private System.Windows.Forms.Button buttonDiag_EAA;
@@ -169,5 +168,6 @@ namespace Tyuiu.ErmakovAA.Sprint7.V13
         private System.Windows.Forms.TextBox textBoxSredOZU_EAA;
         private System.Windows.Forms.TextBox textBoxMaxYadra_EAA;
         private System.Windows.Forms.OpenFileDialog openFileDialogStat_EAA;
+        private Chart chartstat_EAA;
     }
 }
