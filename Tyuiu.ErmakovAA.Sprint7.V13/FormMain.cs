@@ -241,6 +241,11 @@ namespace Tyuiu.ErmakovAA.Sprint7.V13
             FormStatic formstat = new FormStatic();
             formstat.ShowDialog();
         }
+        private void buttonNew_EAA_Click(object sender, EventArgs e)
+        {
+            FormMain formstat = new FormMain();
+            formstat.ShowDialog();
+        }
 
 
         private void groupBoxSearch_EAA_Enter(object sender, EventArgs e)

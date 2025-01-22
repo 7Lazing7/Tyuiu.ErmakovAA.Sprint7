@@ -183,7 +183,7 @@ namespace Tyuiu.ErmakovAA.Sprint7.V13
             dataGridViewIn_EAA.AllowUserToOrderColumns = true;
             dataGridViewIn_EAA.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewIn_EAA.Columns.AddRange(new DataGridViewColumn[] { Имя, столица, площадь, население, национальность, экономика });
-            dataGridViewIn_EAA.Location = new Point(8, 22);
+            dataGridViewIn_EAA.Location = new Point(8, 24);
             dataGridViewIn_EAA.Margin = new Padding(4, 3, 4, 3);
             dataGridViewIn_EAA.Name = "dataGridViewIn_EAA";
             dataGridViewIn_EAA.RowHeadersVisible = false;
@@ -346,6 +346,7 @@ namespace Tyuiu.ErmakovAA.Sprint7.V13
             toolStripMenuItem9.Name = "toolStripMenuItem9";
             toolStripMenuItem9.Size = new Size(198, 22);
             toolStripMenuItem9.Text = "Открыть новое окно";
+            toolStripMenuItem9.Click += buttonNew_EAA_Click;
             // 
             // toolStripMenuItem10
             // 
@@ -384,7 +385,6 @@ namespace Tyuiu.ErmakovAA.Sprint7.V13
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Margin = new Padding(4, 3, 4, 3);
             MaximizeBox = false;
-            MinimizeBox = false;
             Name = "FormMain";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Спринт 7 | Проект | Вариант 13 | Ермаков А.А.";
