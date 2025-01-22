@@ -11,7 +11,7 @@ using Tyuiu.ErmakovAA.Sprint7.V13.Lib;
 
 namespace Tyuiu.ErmakovAA.Sprint7.V13
 {
-    public partial class FormRoute : Form
+    public partial class FormRoute : System.Windows.Forms.Form
     {
         string[]? itemInfo;
         string[]? stops;

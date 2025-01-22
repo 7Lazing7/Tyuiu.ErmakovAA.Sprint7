@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Tyuiu.ErmakovAA.Sprint7.V13
 {
-    public partial class FormGuide : Form
+    public partial class FormGuide : System.Windows.Forms.Form
     {
         public FormGuide()
         {

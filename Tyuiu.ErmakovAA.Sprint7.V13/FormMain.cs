@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
@@ -8,13 +9,15 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using Tyuiu.ErmakovAA.Sprint7.V13.Lib;
+using System.Windows.Forms.DataVisualization.Charting;
 namespace Tyuiu.ErmakovAA.Sprint7.V13
 {
-    public partial class FormMain : Form
+    public partial class FormMain : System.Windows.Forms.Form
     {
         public FormMain()
         {
             InitializeComponent();
+            
         }
 
         private void buttonInfoMe_EAA_Click(object sender, EventArgs e)
@@ -215,5 +218,8 @@ namespace Tyuiu.ErmakovAA.Sprint7.V13
         {
 
         }
+        
+    
+      
     }
 }

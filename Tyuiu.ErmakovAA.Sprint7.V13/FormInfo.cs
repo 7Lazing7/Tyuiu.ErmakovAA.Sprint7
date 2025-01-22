@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Tyuiu.ErmakovAA.Sprint7.V13
 {
-    public partial class FormInfo : Form
+    public partial class FormInfo : System.Windows.Forms.Form
     {
         public FormInfo()
         {

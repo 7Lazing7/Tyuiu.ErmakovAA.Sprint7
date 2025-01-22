@@ -105,7 +105,6 @@ namespace Tyuiu.ErmakovAA.Sprint7.V13
             chartstat_EAA.Series.Add(series1);
             chartstat_EAA.Size = new Size(360, 369);
             chartstat_EAA.TabIndex = 1;
-         
             // 
             // dataGridViewStat_EAA
             // 
@@ -113,7 +112,8 @@ namespace Tyuiu.ErmakovAA.Sprint7.V13
             dataGridViewStat_EAA.Location = new Point(392, 14);
             dataGridViewStat_EAA.Margin = new Padding(4, 3, 4, 3);
             dataGridViewStat_EAA.Name = "dataGridViewStat_EAA";
-            dataGridViewStat_EAA.Size = new Size(226, 142);
+            dataGridViewStat_EAA.RowHeadersVisible = false;
+            dataGridViewStat_EAA.Size = new Size(226, 183);
             dataGridViewStat_EAA.TabIndex = 2;
             // 
             // textBoxSredOZU_EAA
@@ -171,5 +171,3 @@ namespace Tyuiu.ErmakovAA.Sprint7.V13
         private System.Windows.Forms.OpenFileDialog openFileDialogStat_EAA;
     }
 }
-
-

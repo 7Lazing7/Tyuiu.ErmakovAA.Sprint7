@@ -85,7 +85,7 @@ namespace Tyuiu.ErmakovAA.Sprint7.V13
             buttonSave_EAA.Cursor = Cursors.Hand;
             buttonSave_EAA.Font = new Font("Yu Gothic UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 204);
             buttonSave_EAA.Image = (Image)resources.GetObject("buttonSave_EAA.Image");
-            buttonSave_EAA.Location = new Point(86, 17);
+            buttonSave_EAA.Location = new Point(87, 16);
             buttonSave_EAA.Margin = new Padding(4, 3, 4, 3);
             buttonSave_EAA.Name = "buttonSave_EAA";
             buttonSave_EAA.Size = new Size(61, 61);
@@ -118,7 +118,6 @@ namespace Tyuiu.ErmakovAA.Sprint7.V13
             buttonFirma_EAA.TabIndex = 5;
             buttonFirma_EAA.Text = "Существующие фирмы";
             buttonFirma_EAA.UseVisualStyleBackColor = false;
-            buttonFirma_EAA.Click += buttonFirma_EAA_Click;
             // 
             // buttonSortAlp_EAA
             // 
@@ -394,7 +393,6 @@ namespace Tyuiu.ErmakovAA.Sprint7.V13
         private System.Windows.Forms.Button buttonSave_EAA;
         private System.Windows.Forms.Button buttonInfoMe_EAA;
         private System.Windows.Forms.GroupBox groupBoxData_EAA;
-        private System.Windows.Forms.DataGridView dataGridViewIn_EAA;
         private System.Windows.Forms.Button buttonAdd_EAA;
         private System.Windows.Forms.GroupBox groupBoxSearch_EAA;
         private System.Windows.Forms.TextBox textBoxFind_EAA;
@@ -416,6 +414,7 @@ namespace Tyuiu.ErmakovAA.Sprint7.V13
         private ToolStripMenuItem toolStripMenuItem9;
         private ToolStripMenuItem toolStripMenuItem10;
         private ToolStripMenuItem buttonSearch_SBI;
+        private DataGridView dataGridViewIn_EAA;
         private DataGridViewTextBoxColumn Номер;
         private DataGridViewTextBoxColumn Имя;
         private DataGridViewTextBoxColumn столица;
