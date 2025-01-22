@@ -18,6 +18,7 @@ namespace Tyuiu.ErmakovAA.Sprint7.V13
         {
             InitializeComponent();
 
+
         }
 
         private void buttonInfoMe_EAA_Click(object sender, EventArgs e)
@@ -114,21 +115,69 @@ namespace Tyuiu.ErmakovAA.Sprint7.V13
             buttonSortAlp_EAA.Enabled = true;
         }
 
-        private void buttonFirma_EAA_Click(object sender, EventArgs e)
-        {
-            FormMain formfirms = new FormMain();
-            formfirms.ShowDialog();
-        }
+       
 
         private void buttonSortAlp_EAA_Click(object sender, EventArgs e)
         {
             dataGridViewIn_EAA.Sort(dataGridViewIn_EAA.Columns[0], ListSortDirection.Ascending); //сортировка названий
         }
 
+        public class NumericComparer : System.Collections.IComparer
+        {
+            public int Compare(object x, object y)
+            {
+                // Приведение данных из ячеек к строке
+                string value1 = ((DataGridViewRow)x).Cells[0].Value?.ToString();
+                string value2 = ((DataGridViewRow)y).Cells[0].Value?.ToString();
+
+                // Попытка преобразования строки в число
+                if (int.TryParse(value1, out int num1) && int.TryParse(value2, out int num2))
+                {
+                    return num1.CompareTo(num2);
+                }
+
+                // Если одно из значений не число, сортировать как строки
+                return string.Compare(value1, value2);
+            }
+        }
+
+
+
         private void buttonSortData_EAA_Click(object sender, EventArgs e)
         {
-            dataGridViewIn_EAA.Sort(dataGridViewIn_EAA.Columns[6], ListSortDirection.Ascending); //сортировка по году
+            // Указываем индекс столбца, исходя из данных (в данном примере 3)
+            dataGridViewIn_EAA.Sort(new CustomColumnSorter(3));
         }
+
+        private void buttonS_EAA_Click(object sender, EventArgs e)
+        {
+            // Указываем индекс столбца, исходя из данных (в данном примере 2)
+            dataGridViewIn_EAA.Sort(new CustomColumnSorter(2));
+        }
+
+        public class CustomColumnSorter : System.Collections.IComparer
+        {
+            private int columnIndex;
+
+            public CustomColumnSorter(int columnIndex)
+            {
+                this.columnIndex = columnIndex;
+            }
+
+            public int Compare(object x, object y)
+            {
+                string value1 = ((DataGridViewRow)x).Cells[columnIndex].Value?.ToString();
+                string value2 = ((DataGridViewRow)y).Cells[columnIndex].Value?.ToString();
+
+                if (int.TryParse(value1, out int num1) && int.TryParse(value2, out int num2))
+                {
+                    return num1.CompareTo(num2);
+                }
+
+                return string.Compare(value1, value2);
+            }
+        }
+
 
         private void buttonSave_EAA_Click(object sender, EventArgs e)
         {
@@ -181,13 +230,18 @@ namespace Tyuiu.ErmakovAA.Sprint7.V13
             FormGuide formGuide = new FormGuide();
             formGuide.ShowDialog();
         }
-
+        private void buttonСountry_EAA_Click(object sender, EventArgs e)
+        {
+            FormСountry formСountry = new FormСountry();
+            formСountry.ShowDialog();
+        }
 
         private void buttonStat_EAA_Click(object sender, EventArgs e)
         {
             FormStatic formstat = new FormStatic();
             formstat.ShowDialog();
         }
+
 
         private void groupBoxSearch_EAA_Enter(object sender, EventArgs e)
         {

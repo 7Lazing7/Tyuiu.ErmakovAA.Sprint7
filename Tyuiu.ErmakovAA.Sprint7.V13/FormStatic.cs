@@ -5,7 +5,7 @@ using System.Windows.Forms.DataVisualization.Charting;
 
 namespace Tyuiu.ErmakovAA.Sprint7.V13
 {
-    public partial class FormStatic : Form
+    public partial class FormStatic : System.Windows.Forms.Form
     {
         private List<Country> countries = new List<Country>(); // Список для хранения стран
 

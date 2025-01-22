@@ -42,12 +42,18 @@ namespace Tyuiu.ErmakovAA.Sprint7.V13
             ComponentResourceManager resources = new ComponentResourceManager(typeof(FormMain));
             buttonSave_EAA = new Button();
             buttonSortData_EAA = new Button();
-            buttonFirma_EAA = new Button();
+            buttonCountry_EAA = new Button();
             buttonSortAlp_EAA = new Button();
             buttonStat_EAA = new Button();
             buttonInfoMe_EAA = new Button();
             groupBoxData_EAA = new GroupBox();
             dataGridViewIn_EAA = new DataGridView();
+            Имя = new DataGridViewTextBoxColumn();
+            столица = new DataGridViewTextBoxColumn();
+            площадь = new DataGridViewTextBoxColumn();
+            население = new DataGridViewTextBoxColumn();
+            национальность = new DataGridViewTextBoxColumn();
+            экономика = new DataGridViewTextBoxColumn();
             buttonAdd_EAA = new Button();
             groupBoxSearch_EAA = new GroupBox();
             textBoxFind_EAA = new TextBox();
@@ -65,12 +71,7 @@ namespace Tyuiu.ErmakovAA.Sprint7.V13
             toolStripMenuItem8 = new ToolStripMenuItem();
             toolStripMenuItem9 = new ToolStripMenuItem();
             toolStripMenuItem10 = new ToolStripMenuItem();
-            Имя = new DataGridViewTextBoxColumn();
-            столица = new DataGridViewTextBoxColumn();
-            площадь = new DataGridViewTextBoxColumn();
-            население = new DataGridViewTextBoxColumn();
-            национальность = new DataGridViewTextBoxColumn();
-            экономика = new DataGridViewTextBoxColumn();
+            buttonS = new Button();
             groupBoxData_EAA.SuspendLayout();
             ((ISupportInitialize)dataGridViewIn_EAA).BeginInit();
             groupBoxSearch_EAA.SuspendLayout();
@@ -97,36 +98,37 @@ namespace Tyuiu.ErmakovAA.Sprint7.V13
             // 
             buttonSortData_EAA.BackColor = Color.Gray;
             buttonSortData_EAA.Font = new Font("Yu Gothic UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 204);
-            buttonSortData_EAA.Location = new Point(13, 236);
+            buttonSortData_EAA.Location = new Point(13, 300);
             buttonSortData_EAA.Margin = new Padding(4, 3, 4, 3);
             buttonSortData_EAA.Name = "buttonSortData_EAA";
-            buttonSortData_EAA.Size = new Size(127, 47);
+            buttonSortData_EAA.Size = new Size(233, 47);
             buttonSortData_EAA.TabIndex = 7;
-            buttonSortData_EAA.Text = " Отсортировать\r\nпо году выпуска";
+            buttonSortData_EAA.Text = " Отсортировать\r\nпо количеству населения";
             buttonSortData_EAA.UseVisualStyleBackColor = false;
             buttonSortData_EAA.Click += buttonSortData_EAA_Click;
             // 
-            // buttonFirma_EAA
+            // buttonCountry_EAA
             // 
-            buttonFirma_EAA.BackColor = Color.LightGray;
-            buttonFirma_EAA.Font = new Font("Yu Gothic UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 204);
-            buttonFirma_EAA.Location = new Point(13, 342);
-            buttonFirma_EAA.Margin = new Padding(4, 3, 4, 3);
-            buttonFirma_EAA.Name = "buttonFirma_EAA";
-            buttonFirma_EAA.Size = new Size(127, 61);
-            buttonFirma_EAA.TabIndex = 5;
-            buttonFirma_EAA.Text = "Существующие фирмы";
-            buttonFirma_EAA.UseVisualStyleBackColor = false;
+            buttonCountry_EAA.BackColor = Color.LightGray;
+            buttonCountry_EAA.Font = new Font("Yu Gothic UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            buttonCountry_EAA.Location = new Point(13, 358);
+            buttonCountry_EAA.Margin = new Padding(4, 3, 4, 3);
+            buttonCountry_EAA.Name = "buttonCountry_EAA";
+            buttonCountry_EAA.Size = new Size(233, 61);
+            buttonCountry_EAA.TabIndex = 5;
+            buttonCountry_EAA.Text = "Существующие страны";
+            buttonCountry_EAA.UseVisualStyleBackColor = false;
+            buttonCountry_EAA.Click += buttonСountry_EAA_Click;
             // 
             // buttonSortAlp_EAA
             // 
             buttonSortAlp_EAA.BackColor = Color.Gray;
             buttonSortAlp_EAA.Font = new Font("Yu Gothic UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 204);
             buttonSortAlp_EAA.ForeColor = SystemColors.ControlText;
-            buttonSortAlp_EAA.Location = new Point(13, 289);
+            buttonSortAlp_EAA.Location = new Point(13, 194);
             buttonSortAlp_EAA.Margin = new Padding(4, 3, 4, 3);
             buttonSortAlp_EAA.Name = "buttonSortAlp_EAA";
-            buttonSortAlp_EAA.Size = new Size(127, 47);
+            buttonSortAlp_EAA.Size = new Size(233, 47);
             buttonSortAlp_EAA.TabIndex = 6;
             buttonSortAlp_EAA.Text = "Отсортировать\r\n по алфавиту";
             buttonSortAlp_EAA.UseVisualStyleBackColor = false;
@@ -188,6 +190,39 @@ namespace Tyuiu.ErmakovAA.Sprint7.V13
             dataGridViewIn_EAA.Size = new Size(652, 430);
             dataGridViewIn_EAA.TabIndex = 0;
             dataGridViewIn_EAA.CellContentClick += dataGridViewIn_EAA_CellContentClick;
+            // 
+            // Имя
+            // 
+            Имя.HeaderText = "Страна";
+            Имя.Name = "Имя";
+            // 
+            // столица
+            // 
+            столица.HeaderText = "Столица";
+            столица.Name = "столица";
+            // 
+            // площадь
+            // 
+            площадь.HeaderText = "Площадь";
+            площадь.Name = "площадь";
+            площадь.Width = 110;
+            // 
+            // население
+            // 
+            население.HeaderText = " Население";
+            население.Name = "население";
+            население.Width = 110;
+            // 
+            // национальность
+            // 
+            национальность.HeaderText = " Национальность";
+            национальность.Name = "национальность";
+            национальность.Width = 130;
+            // 
+            // экономика
+            // 
+            экономика.HeaderText = "Экономика";
+            экономика.Name = "экономика";
             // 
             // buttonAdd_EAA
             // 
@@ -311,7 +346,6 @@ namespace Tyuiu.ErmakovAA.Sprint7.V13
             toolStripMenuItem9.Name = "toolStripMenuItem9";
             toolStripMenuItem9.Size = new Size(198, 22);
             toolStripMenuItem9.Text = "Открыть новое окно";
-            toolStripMenuItem9.Click += buttonFirma_EAA_Click;
             // 
             // toolStripMenuItem10
             // 
@@ -320,38 +354,18 @@ namespace Tyuiu.ErmakovAA.Sprint7.V13
             toolStripMenuItem10.Size = new Size(198, 22);
             toolStripMenuItem10.Text = "Открыть данный файл";
             // 
-            // Имя
+            // buttonS
             // 
-            Имя.HeaderText = "Страна";
-            Имя.Name = "Имя";
-            // 
-            // столица
-            // 
-            столица.HeaderText = "Столица";
-            столица.Name = "столица";
-            // 
-            // площадь
-            // 
-            площадь.HeaderText = "Площадь";
-            площадь.Name = "площадь";
-            площадь.Width = 110;
-            // 
-            // население
-            // 
-            население.HeaderText = " Население";
-            население.Name = "население";
-            население.Width = 110;
-            // 
-            // национальность
-            // 
-            национальность.HeaderText = " Национальность";
-            национальность.Name = "национальность";
-            национальность.Width = 130;
-            // 
-            // экономика
-            // 
-            экономика.HeaderText = "Экономика";
-            экономика.Name = "экономика";
+            buttonS.BackColor = Color.Gray;
+            buttonS.Font = new Font("Yu Gothic UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            buttonS.Location = new Point(13, 247);
+            buttonS.Margin = new Padding(4, 3, 4, 3);
+            buttonS.Name = "buttonS";
+            buttonS.Size = new Size(233, 47);
+            buttonS.TabIndex = 8;
+            buttonS.Text = " Отсортировать\r\nпо площади";
+            buttonS.UseVisualStyleBackColor = false;
+            buttonS.Click += buttonS_EAA_Click;
             // 
             // FormMain
             // 
@@ -359,7 +373,8 @@ namespace Tyuiu.ErmakovAA.Sprint7.V13
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightGray;
             ClientSize = new Size(933, 519);
-            Controls.Add(buttonFirma_EAA);
+            Controls.Add(buttonS);
+            Controls.Add(buttonCountry_EAA);
             Controls.Add(buttonSortData_EAA);
             Controls.Add(menuStrip1);
             Controls.Add(groupBox1);
@@ -396,7 +411,7 @@ namespace Tyuiu.ErmakovAA.Sprint7.V13
         private System.Windows.Forms.Button buttonStat_EAA;
         private System.Windows.Forms.Button buttonSortData_EAA;
         private System.Windows.Forms.Button buttonSortAlp_EAA;
-        private System.Windows.Forms.Button buttonFirma_EAA;
+        private System.Windows.Forms.Button buttonCountry_EAA;
         private System.Windows.Forms.SaveFileDialog saveFileDialog_EAA;
         private System.Windows.Forms.ToolTip toolTip_EAA;
         private GroupBox groupBox1;
@@ -418,5 +433,6 @@ namespace Tyuiu.ErmakovAA.Sprint7.V13
         private DataGridViewTextBoxColumn население;
         private DataGridViewTextBoxColumn национальность;
         private DataGridViewTextBoxColumn экономика;
+        private Button buttonS;
     }
 }
