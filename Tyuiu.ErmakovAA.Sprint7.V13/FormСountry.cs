@@ -31,8 +31,15 @@ namespace Tyuiu.ErmakovAA.Sprint7.V13
             countries.Add(new Country { Name = "США", Capital = "Вашингтон", Area = 9833517, Economicall = true, Population = 331108434, Nationality = "Американцы" });
             countries.Add(new Country { Name = "Мексика", Capital = "Мехико", Area = 1972550, Economicall = true, Population = 133649565, Nationality = "Мексиканцы" });
             countries.Add(new Country { Name = "Таиланд", Capital = "Бангкок", Area = 513120, Economicall = true, Population = 65969270, Nationality = "Таиландцы" });
+            countries.Add(new Country { Name = "Бразилия", Capital = "Бразилиа", Area = 8515, Economicall = true, Population = 220051512, Nationality = "Брази́льцы" });
+            countries.Add(new Country { Name = "ЮАР", Capital = "Претория", Area = 1219090, Economicall = true, Population = 60604992, Nationality = "Африканцы" });
+            countries.Add(new Country { Name = "Армения", Capital = "Ереван", Area = 29800, Economicall = true, Population = 3039700, Nationality = "Армяне" });
 
         }
+
+       
+           
+            
 
         // Заполнение DataGridView данными
         private void PopulateDataGridView()
@@ -42,9 +49,6 @@ namespace Tyuiu.ErmakovAA.Sprint7.V13
         }
 
 
-
-
-        // Обработчик события для вычисления среднего населения
 
 
 
@@ -57,6 +61,12 @@ namespace Tyuiu.ErmakovAA.Sprint7.V13
             public bool Economicall { get; set; } // Экономическая развитость
             public int Population { get; set; } // Население
             public string Nationality { get; set; } // Преобладающая национальность
+
+        }
+       
+
+        private void dataGridViewStat_EAA_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
     }
