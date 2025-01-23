@@ -156,7 +156,7 @@ namespace Tyuiu.ErmakovAA.Sprint7.V13
             // Указываем индекс столбца, исходя из данных (в данном примере 2)
             dataGridViewIn_EAA.Sort(new CustomColumnSorter(2));
         }
-
+     
         public class CustomColumnSorter : System.Collections.IComparer
         {
             private int columnIndex;
@@ -288,23 +288,23 @@ namespace Tyuiu.ErmakovAA.Sprint7.V13
             public string Name { get; set; }
             public string Capital { get; set; }
             public double Area { get; set; }
-            public bool Economicall { get; set; }
+            public string Economicall { get; set; }
             public int Population { get; set; }
             public string Nationality { get; set; }
         }
 
         private List<Country> countries = new List<Country>
         {
-             new Country { Name = "Россия", Capital = "Москва", Area = 17098242, Economicall = false, Population = 146000000, Nationality = "Русские" },
-             new Country { Name = "Канада", Capital = "Оттава", Area = 9984670, Economicall = true, Population = 37700000, Nationality = "Канадцы" },
-             new Country { Name = "Китай", Capital = "Пекин", Area = 9596960, Economicall = true, Population = 1402000000, Nationality = "Китайцы" },
-             new Country { Name = "Япония", Capital = "Токио", Area = 377969, Economicall = true, Population = 124342000, Nationality = "Японцы" },
-             new Country { Name = "США", Capital = "Вашингтон", Area = 9833517, Economicall = true, Population = 331108434, Nationality = "Американцы" },
-             new Country { Name = "Мексика", Capital = "Мехико", Area = 1972550, Economicall = true, Population = 133649565, Nationality = "Мексиканцы" },
-             new Country { Name = "Таиланд", Capital = "Бангкок", Area = 513120, Economicall = true, Population = 65969270, Nationality = "Таиландцы" },
-             new Country { Name = "Бразилия", Capital = "Бразилиа", Area = 8515, Economicall = true, Population = 220051512, Nationality = "Брази́льцы" },
-             new Country { Name = "ЮАР", Capital = "Претория", Area = 1219090, Economicall = true, Population = 60604992, Nationality = "Африканцы" },
-             new Country { Name = "Армения", Capital = "Ереван", Area = 29800, Economicall = true, Population = 3039700, Nationality = "Армяне" },
+             new Country { Name = "Россия", Capital = "Москва", Area = 17098242, Economicall = "6-е место" , Population = 146000000, Nationality = "Русские" },
+             new Country { Name = "Канада", Capital = "Оттава", Area = 9984670, Economicall = "16-е место", Population = 37700000, Nationality = "Канадцы" },
+             new Country { Name = "Китай", Capital = "Пекин", Area = 9596960, Economicall = "1-е место", Population = 1402000000, Nationality = "Китайцы" },
+             new Country { Name = "Япония", Capital = "Токио", Area = 377969, Economicall = "4-е место", Population = 124342000, Nationality = "Японцы" },
+             new Country { Name = "США", Capital = "Вашингтон", Area = 9833517, Economicall = "2-е место", Population = 331108434, Nationality = "Американцы" },
+             new Country { Name = "Мексика", Capital = "Мехико", Area = 1972550, Economicall = "12-е место", Population = 133649565, Nationality = "Мексиканцы" },
+             new Country { Name = "Таиланд", Capital = "Бангкок", Area = 513120, Economicall = "23-е место", Population = 65969270, Nationality = "Таиландцы" },
+             new Country { Name = "Бразилия", Capital = "Бразилиа", Area = 8515, Economicall = "8-е место", Population = 220051512, Nationality = "Брази́льцы" },
+             new Country { Name = "ЮАР", Capital = "Претория", Area = 1219090, Economicall = "33-е место", Population = 60604992, Nationality = "Африканцы" },
+             new Country { Name = "Армения", Capital = "Ереван", Area = 29800, Economicall = "112-е место", Population = 3039700, Nationality = "Армяне" },
             
         };
        
@@ -317,7 +317,7 @@ namespace Tyuiu.ErmakovAA.Sprint7.V13
             dataGridViewIn_EAA.Columns.Add("Name", "Страна");
             dataGridViewIn_EAA.Columns.Add("Capital", "Столица");
             dataGridViewIn_EAA.Columns.Add("Area", "Площадь");
-            dataGridViewIn_EAA.Columns.Add("Economicall", "Экономика");
+            dataGridViewIn_EAA.Columns.Add("Economicall", "ВВП");
             dataGridViewIn_EAA.Columns.Add("Population", "Население");
             var nationalityColumn = dataGridViewIn_EAA.Columns.Add("Nationality", "Национальность");
 

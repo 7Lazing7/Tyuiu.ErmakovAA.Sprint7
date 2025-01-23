@@ -20,16 +20,16 @@ namespace Tyuiu.ErmakovAA.Sprint7.V13
         // Метод для загрузки демонстрационных данных о странах
         private void LoadSampleData()
         {
-            countries.Add(new Country { Name = "Россия", Capital = "Москва", Area = 17098242, Economicall = false, Population = 146000000, Nationality = "Русские" });
-            countries.Add(new Country { Name = "Таиланд", Capital = "Бангкок", Area = 513120, Economicall = true, Population = 65969270, Nationality = "Таиландцы" });
-            countries.Add(new Country { Name = "Канада", Capital = "Оттава", Area = 9984670, Economicall = true, Population = 37700000, Nationality = "Канадцы" });
-            countries.Add(new Country { Name = "Армения", Capital = "Ереван", Area = 29800, Economicall = true, Population = 3039700, Nationality = "Армяне" });
-            countries.Add(new Country { Name = "Китай", Capital = "Пекин", Area = 9596960, Economicall = true, Population = 1402000000, Nationality = "Китайцы" });
-            countries.Add(new Country { Name = "Япония", Capital = "Токио", Area = 377969, Economicall = true, Population = 124342000, Nationality = "Японцы," });
-            countries.Add(new Country { Name = "США", Capital = "Вашингтон", Area = 9833517, Economicall = true, Population = 331108434, Nationality = "Американцы" });
-            countries.Add(new Country { Name = "Мексика", Capital = "Мехико", Area = 1972550, Economicall = true, Population = 133649565, Nationality = "Мексиканцы" });
-            countries.Add(new Country { Name = "ЮАР", Capital = "Претория", Area = 1219090, Economicall = true, Population = 60604992, Nationality = "Африканцы" });
-           
+            countries.Add(new Country { Страна = "Россия", Столица = "Москва", Площадь = 17098242, Экономика = false, Население = 146000000, Национальность = "Русские" });
+            countries.Add(new Country { Страна = "Таиланд", Столица = "Бангкок", Площадь = 513120, Экономика = true, Население = 65969270, Национальность = "Таиландцы" });
+            countries.Add(new Country { Страна = "Канада", Столица = "Оттава", Площадь = 9984670, Экономика = true, Население = 37700000, Национальность = "Канадцы" });
+            countries.Add(new Country { Страна = "Армения", Столица = "Ереван", Площадь = 29800, Экономика = false, Население = 3039700, Национальность = "Армяне" });
+            countries.Add(new Country { Страна = "Китай", Столица = "Пекин", Площадь = 9596960, Экономика = false, Население = 1402000000, Национальность = "Китайцы" });
+            countries.Add(new Country { Страна = "Япония", Столица = "Токио", Площадь = 377969, Экономика = true, Население = 124342000, Национальность = "Японцы," });
+            countries.Add(new Country { Страна = "США", Столица = "Вашингтон", Площадь = 9833517, Экономика = true, Население = 331108434, Национальность = "Американцы" });
+            countries.Add(new Country { Страна = "Мексика", Столица = "Мехико", Площадь = 1972550, Экономика = false, Население = 133649565, Национальность = "Мексиканцы" });
+            countries.Add(new Country { Страна = "ЮАР", Столица = "Претория", Площадь = 1219090, Экономика = false, Население = 60604992, Национальность = "Африканцы" });
+
 
         }
 
@@ -52,12 +52,12 @@ namespace Tyuiu.ErmakovAA.Sprint7.V13
             foreach (Country country in countries)
             {
                 DataPoint point = new DataPoint();
-                point.SetValueXY(country.Name, country.Area);
-                point.Label = "" ; // Убираем метки с именами стран
-                point.LegendText = country.Name;
+                point.SetValueXY(country.Страна, country.Площадь);
+                point.Label = ""; // Убираем метки с именами стран
+                point.LegendText = country.Страна;
                 series.Points.Add(point);
                 chartstat_EAA.Legends[0].Enabled = false;
-               
+
             }
 
             chartstat_EAA.Series.Add(series);
@@ -72,7 +72,7 @@ namespace Tyuiu.ErmakovAA.Sprint7.V13
             double averagePopulation = 0;
             foreach (Country country in countries)
             {
-                averagePopulation += country.Population;
+                averagePopulation += country.Население;
             }
             averagePopulation /= countries.Count;
             textBoxSredOZU_EAA.Text = averagePopulation.ToString("N0");
@@ -86,12 +86,12 @@ namespace Tyuiu.ErmakovAA.Sprint7.V13
             Country mostPopulatedCountry = countries[0];
             foreach (Country country in countries)
             {
-                if (country.Population > mostPopulatedCountry.Population)
+                if (country.Население > mostPopulatedCountry.Население)
                 {
                     mostPopulatedCountry = country;
                 }
             }
-            textBoxMaxYadra_EAA.Text = mostPopulatedCountry.Name;
+            textBoxMaxYadra_EAA.Text = mostPopulatedCountry.Страна;
         }
 
         private void chartstat_EAA_Click(object sender, EventArgs e)
@@ -101,7 +101,7 @@ namespace Tyuiu.ErmakovAA.Sprint7.V13
             double averagePopulation = 0;
             foreach (Country country in countries)
             {
-                averagePopulation += country.Population;
+                averagePopulation += country.Население;
             }
             averagePopulation /= countries.Count;
             textBoxSredOZU_EAA.Text = averagePopulation.ToString("N0");
@@ -112,13 +112,13 @@ namespace Tyuiu.ErmakovAA.Sprint7.V13
     // Класс Country, содержащий информацию о стране
     public class Country
     {
-        public string Name { get; set; } // Название страны
-        public string Capital { get; set; } // Столица
-        public double Area { get; set; } // Площадь территории
-        public bool Economicall { get; set; } // Экономическая развитость
-        public int Population { get; set; } // Население
-        public string Nationality { get; set; } // Преобладающая национальность
-      
+        public string Страна { get; set; } // Название страны
+        public string Столица { get; set; } // Столица
+        public double Площадь { get; set; } // Площадь территории
+        public bool Экономика { get; set; } // Экономическая развитость
+        public int Население { get; set; } // Население
+        public string Национальность { get; set; } // Преобладающая национальность
+
     }
 }
 

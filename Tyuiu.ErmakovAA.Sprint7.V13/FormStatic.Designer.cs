@@ -149,6 +149,7 @@ namespace Tyuiu.ErmakovAA.Sprint7.V13
             Controls.Add(panelLeft_EAA);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Margin = new Padding(4, 3, 4, 3);
+            MaximizeBox = false;
             Name = "FormStatic";
             Text = "Статистика";
             panelLeft_EAA.ResumeLayout(false);

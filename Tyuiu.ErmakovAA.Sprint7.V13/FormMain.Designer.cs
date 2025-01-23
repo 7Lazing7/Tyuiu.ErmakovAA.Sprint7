@@ -95,7 +95,6 @@ namespace Tyuiu.ErmakovAA.Sprint7.V13
             groupBoxSearch_EAA.TabIndex = 4;
             groupBoxSearch_EAA.TabStop = false;
             groupBoxSearch_EAA.Text = "Поиск по названию";
-          
             // 
             // textBoxFind_EAA
             // 
@@ -175,7 +174,7 @@ namespace Tyuiu.ErmakovAA.Sprint7.V13
             // 
             buttonCountry_EAA.BackColor = Color.LightGray;
             buttonCountry_EAA.Font = new Font("Yu Gothic UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 204);
-            buttonCountry_EAA.Location = new Point(13, 358);
+            buttonCountry_EAA.Location = new Point(13, 353);
             buttonCountry_EAA.Margin = new Padding(4, 3, 4, 3);
             buttonCountry_EAA.Name = "buttonCountry_EAA";
             buttonCountry_EAA.Size = new Size(233, 61);
@@ -239,7 +238,6 @@ namespace Tyuiu.ErmakovAA.Sprint7.V13
             groupBox1.TabIndex = 6;
             groupBox1.TabStop = false;
             groupBox1.Text = "Файл";
-           
             // 
             // menuStrip1
             // 
@@ -250,7 +248,6 @@ namespace Tyuiu.ErmakovAA.Sprint7.V13
             menuStrip1.Size = new Size(933, 24);
             menuStrip1.TabIndex = 7;
             menuStrip1.Text = "menuStrip1";
-            
             // 
             // ToolStripMenuItemProgramm_EAA
             // 
@@ -357,7 +354,6 @@ namespace Tyuiu.ErmakovAA.Sprint7.V13
             dataGridViewIn_EAA.RowHeadersVisible = false;
             dataGridViewIn_EAA.Size = new Size(660, 445);
             dataGridViewIn_EAA.TabIndex = 0;
-           
             // 
             // Имя
             // 
@@ -412,14 +408,12 @@ namespace Tyuiu.ErmakovAA.Sprint7.V13
             Name = "FormMain";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Спринт 7 | Проект | Вариант 13 | Ермаков А.А.";
-         
             groupBoxSearch_EAA.ResumeLayout(false);
             groupBoxSearch_EAA.PerformLayout();
             groupBox1.ResumeLayout(false);
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
             groupBoxData_EAA.ResumeLayout(false);
-            groupBoxData_EAA.PerformLayout();
             ((ISupportInitialize)dataGridViewIn_EAA).EndInit();
             ResumeLayout(false);
             PerformLayout();
