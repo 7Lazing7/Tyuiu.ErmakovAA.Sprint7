@@ -259,26 +259,26 @@ namespace Tyuiu.ErmakovAA.Sprint7.V13
             // toolStripMenuItem2
             // 
             toolStripMenuItem2.Name = "toolStripMenuItem2";
-            toolStripMenuItem2.Size = new Size(149, 22);
+            toolStripMenuItem2.Size = new Size(180, 22);
             toolStripMenuItem2.Text = "О программе";
             toolStripMenuItem2.Click += buttonInfoMe_EAA_Click;
             // 
             // buttonSearch_SBI
             // 
             buttonSearch_SBI.Name = "buttonSearch_SBI";
-            buttonSearch_SBI.Size = new Size(149, 22);
+            buttonSearch_SBI.Size = new Size(180, 22);
             buttonSearch_SBI.Text = "Руководство";
             buttonSearch_SBI.Click += buttonHelp_SBI_Click;
             // 
             // toolStripSeparator2
             // 
             toolStripSeparator2.Name = "toolStripSeparator2";
-            toolStripSeparator2.Size = new Size(146, 6);
+            toolStripSeparator2.Size = new Size(177, 6);
             // 
             // ToolStripMenuExit_EAA
             // 
             ToolStripMenuExit_EAA.Name = "ToolStripMenuExit_EAA";
-            ToolStripMenuExit_EAA.Size = new Size(149, 22);
+            ToolStripMenuExit_EAA.Size = new Size(180, 22);
             ToolStripMenuExit_EAA.Text = "Выход";
             ToolStripMenuExit_EAA.Click += ToolStripMenuExit_EAA_Click;
             // 
@@ -337,7 +337,7 @@ namespace Tyuiu.ErmakovAA.Sprint7.V13
             groupBoxData_EAA.Margin = new Padding(4, 3, 4, 3);
             groupBoxData_EAA.Name = "groupBoxData_EAA";
             groupBoxData_EAA.Padding = new Padding(4, 3, 4, 3);
-            groupBoxData_EAA.Size = new Size(668, 467);
+            groupBoxData_EAA.Size = new Size(668, 338);
             groupBoxData_EAA.TabIndex = 3;
             groupBoxData_EAA.TabStop = false;
             groupBoxData_EAA.Text = "Вводимые данные:";
@@ -352,7 +352,7 @@ namespace Tyuiu.ErmakovAA.Sprint7.V13
             dataGridViewIn_EAA.Margin = new Padding(4, 3, 4, 3);
             dataGridViewIn_EAA.Name = "dataGridViewIn_EAA";
             dataGridViewIn_EAA.RowHeadersVisible = false;
-            dataGridViewIn_EAA.Size = new Size(660, 445);
+            dataGridViewIn_EAA.Size = new Size(660, 316);
             dataGridViewIn_EAA.TabIndex = 0;
             // 
             // Имя

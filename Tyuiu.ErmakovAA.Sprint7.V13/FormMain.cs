@@ -305,7 +305,7 @@ namespace Tyuiu.ErmakovAA.Sprint7.V13
              new Country { Name = "Бразилия", Capital = "Бразилиа", Area = 8515, Economicall = "8-е место", Population = 220051512, Nationality = "Брази́льцы" },
              new Country { Name = "ЮАР", Capital = "Претория", Area = 1219090, Economicall = "33-е место", Population = 60604992, Nationality = "Африканцы" },
              new Country { Name = "Армения", Capital = "Ереван", Area = 29800, Economicall = "112-е место", Population = 3039700, Nationality = "Армяне" },
-            
+
         };
        
 

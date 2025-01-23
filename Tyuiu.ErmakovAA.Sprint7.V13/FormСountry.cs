@@ -34,12 +34,17 @@ namespace Tyuiu.ErmakovAA.Sprint7.V13
             countries.Add(new Country { Страна = "Бразилия", Столица = "Бразилиа", Площадь = 8515, Экономика = false, Население = 220051512, Национальность = "Брази́льцы" });
             countries.Add(new Country { Страна = "ЮАР", Столица = "Претория", Площадь = 1219090, Экономика = false, Население = 60604992, Национальность = "Африканцы" });
             countries.Add(new Country { Страна = "Армения", Столица = "Ереван", Площадь = 29800, Экономика = false, Население = 3039700, Национальность = "Армяне" });
-
+            countries.Add(new Country { Страна = "", Столица = "", Национальность = "" });
+            countries.Add(new Country { Страна = "", Столица = "", Национальность = "" });
+            countries.Add(new Country { Страна = "", Столица = "", Национальность = "" });
+            countries.Add(new Country { Страна = "", Столица = "", Национальность = "" });
+            countries.Add(new Country { Страна = "", Столица = "", Национальность = "" });
+            countries.Add(new Country { Страна = "", Столица = "", Национальность = "" });
         }
 
 
-           
-            
+
+
 
         // Заполнение DataGridView данными
         private void PopulateDataGridView()
@@ -63,9 +68,14 @@ namespace Tyuiu.ErmakovAA.Sprint7.V13
             public string Национальность { get; set; } // Преобладающая национальность
 
         }
-       
+
 
         private void dataGridViewStat_EAA_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void FormСountry_Load(object sender, EventArgs e)
         {
 
         }

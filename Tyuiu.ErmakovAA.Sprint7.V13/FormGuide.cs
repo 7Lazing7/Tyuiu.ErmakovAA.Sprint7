@@ -21,5 +21,25 @@ namespace Tyuiu.ErmakovAA.Sprint7.V13
         {
             this.ActiveControl = null;
         }
+
+        private void pictureBoxGuide_SBI_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBoxGuideDescription_SBI_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void maskedTextBox1_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

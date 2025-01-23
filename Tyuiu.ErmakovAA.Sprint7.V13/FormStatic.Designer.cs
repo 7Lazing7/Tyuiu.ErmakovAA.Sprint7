@@ -97,7 +97,7 @@ namespace Tyuiu.ErmakovAA.Sprint7.V13
             dataGridViewStat_EAA.Margin = new Padding(4, 3, 4, 3);
             dataGridViewStat_EAA.Name = "dataGridViewStat_EAA";
             dataGridViewStat_EAA.RowHeadersVisible = false;
-            dataGridViewStat_EAA.Size = new Size(226, 218);
+            dataGridViewStat_EAA.Size = new Size(226, 369);
             dataGridViewStat_EAA.TabIndex = 2;
             // 
             // textBoxSredOZU_EAA

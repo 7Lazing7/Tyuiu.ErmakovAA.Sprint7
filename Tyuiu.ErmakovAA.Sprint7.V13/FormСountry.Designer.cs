@@ -78,8 +78,10 @@ namespace Tyuiu.ErmakovAA.Sprint7.V13
             Controls.Add(dataGridViewStat_EAA);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Margin = new Padding(4, 3, 4, 3);
+            MaximizeBox = false;
             Name = "FormСountry";
             Text = "Страны";
+            Load += FormСountry_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridViewStat_EAA).EndInit();
             ResumeLayout(false);
         }
