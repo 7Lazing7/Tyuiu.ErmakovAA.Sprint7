@@ -95,7 +95,7 @@ namespace Tyuiu.ErmakovAA.Sprint7.V13
             groupBoxSearch_EAA.TabIndex = 4;
             groupBoxSearch_EAA.TabStop = false;
             groupBoxSearch_EAA.Text = "Поиск по названию";
-            groupBoxSearch_EAA.Enter += groupBoxSearch_EAA_Enter;
+          
             // 
             // textBoxFind_EAA
             // 
@@ -239,7 +239,7 @@ namespace Tyuiu.ErmakovAA.Sprint7.V13
             groupBox1.TabIndex = 6;
             groupBox1.TabStop = false;
             groupBox1.Text = "Файл";
-            groupBox1.Enter += groupBox1_Enter;
+           
             // 
             // menuStrip1
             // 
@@ -250,7 +250,7 @@ namespace Tyuiu.ErmakovAA.Sprint7.V13
             menuStrip1.Size = new Size(933, 24);
             menuStrip1.TabIndex = 7;
             menuStrip1.Text = "menuStrip1";
-            menuStrip1.ItemClicked += menuStrip1_ItemClicked;
+            
             // 
             // ToolStripMenuItemProgramm_EAA
             // 
@@ -357,7 +357,7 @@ namespace Tyuiu.ErmakovAA.Sprint7.V13
             dataGridViewIn_EAA.RowHeadersVisible = false;
             dataGridViewIn_EAA.Size = new Size(660, 445);
             dataGridViewIn_EAA.TabIndex = 0;
-            dataGridViewIn_EAA.CellContentClick += dataGridViewIn_EAA_CellContentClick;
+           
             // 
             // Имя
             // 
@@ -412,7 +412,7 @@ namespace Tyuiu.ErmakovAA.Sprint7.V13
             Name = "FormMain";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Спринт 7 | Проект | Вариант 13 | Ермаков А.А.";
-            Load += FormMain_Load;
+         
             groupBoxSearch_EAA.ResumeLayout(false);
             groupBoxSearch_EAA.PerformLayout();
             groupBox1.ResumeLayout(false);

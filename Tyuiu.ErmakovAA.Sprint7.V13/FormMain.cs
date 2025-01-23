@@ -249,40 +249,12 @@ namespace Tyuiu.ErmakovAA.Sprint7.V13
         }
 
 
-        private void groupBoxSearch_EAA_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void FormMain_Load(object sender, EventArgs e)
-        {
-
-        }
 
         private void ToolStripMenuExit_EAA_Click(object sender, EventArgs e)
         {
             Close();
         }
 
-        private void toolStripMenuItem8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dataGridViewIn_EAA_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-
-        }
 
         public class Country
         {
@@ -306,8 +278,7 @@ namespace Tyuiu.ErmakovAA.Sprint7.V13
              new Country { Name = "Бразилия", Capital = "Бразилиа", Area = 8515, Economicall = true, Population = 220051512, Nationality = "Брази́льцы" },
              new Country { Name = "ЮАР", Capital = "Претория", Area = 1219090, Economicall = true, Population = 60604992, Nationality = "Африканцы" },
              new Country { Name = "Армения", Capital = "Ереван", Area = 29800, Economicall = true, Population = 3039700, Nationality = "Армяне" },
-             
-
+            
         };
        
 
