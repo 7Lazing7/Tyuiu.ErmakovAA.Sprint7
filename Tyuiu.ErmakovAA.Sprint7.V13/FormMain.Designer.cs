@@ -259,26 +259,26 @@ namespace Tyuiu.ErmakovAA.Sprint7.V13
             // toolStripMenuItem2
             // 
             toolStripMenuItem2.Name = "toolStripMenuItem2";
-            toolStripMenuItem2.Size = new Size(180, 22);
+            toolStripMenuItem2.Size = new Size(149, 22);
             toolStripMenuItem2.Text = "О программе";
             toolStripMenuItem2.Click += buttonInfoMe_EAA_Click;
             // 
             // buttonSearch_SBI
             // 
             buttonSearch_SBI.Name = "buttonSearch_SBI";
-            buttonSearch_SBI.Size = new Size(180, 22);
+            buttonSearch_SBI.Size = new Size(149, 22);
             buttonSearch_SBI.Text = "Руководство";
             buttonSearch_SBI.Click += buttonHelp_SBI_Click;
             // 
             // toolStripSeparator2
             // 
             toolStripSeparator2.Name = "toolStripSeparator2";
-            toolStripSeparator2.Size = new Size(177, 6);
+            toolStripSeparator2.Size = new Size(146, 6);
             // 
             // ToolStripMenuExit_EAA
             // 
             ToolStripMenuExit_EAA.Name = "ToolStripMenuExit_EAA";
-            ToolStripMenuExit_EAA.Size = new Size(180, 22);
+            ToolStripMenuExit_EAA.Size = new Size(149, 22);
             ToolStripMenuExit_EAA.Text = "Выход";
             ToolStripMenuExit_EAA.Click += ToolStripMenuExit_EAA_Click;
             // 
