@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.IO;
 using Tyuiu.ErmakovAA.Sprint7.V13.Lib;
 using System.Windows.Forms.DataVisualization.Charting;
+using System.Diagnostics;
 namespace Tyuiu.ErmakovAA.Sprint7.V13
 {
     public partial class FormMain : System.Windows.Forms.Form
@@ -182,48 +183,74 @@ namespace Tyuiu.ErmakovAA.Sprint7.V13
 
         private void buttonSave_EAA_Click(object sender, EventArgs e)
         {
+            // Установите имя файла и директорию по умолчанию
             saveFileDialog_EAA.FileName = "OutPutIVM.csv";
             saveFileDialog_EAA.InitialDirectory = Directory.GetCurrentDirectory();
-            saveFileDialog_EAA.ShowDialog();
 
-            string path = saveFileDialog_EAA.FileName;
-
-            FileInfo fileInfo = new FileInfo(path);
-            bool fileExists = fileInfo.Exists;
-            if (fileExists)
+            if (saveFileDialog_EAA.ShowDialog() == DialogResult.OK)
             {
-                File.Delete(path);
-            }
+                string path = saveFileDialog_EAA.FileName;
 
-            int rows = dataGridViewIn_EAA.RowCount;
-            int columns = dataGridViewIn_EAA.ColumnCount;
-
-            string str = "Страна, Столица, Площадь, Экономика, Население, Национальность\n";
-            for (int i = 0; i < rows - 1; i++)
-            {
-                for (int j = 0; j < columns; j++)
+                try
                 {
-                    if (j != columns - 1)
+                    // Удалите файл, если он уже существует
+                    if (File.Exists(path))
                     {
-                        str = str + dataGridViewIn_EAA.Rows[i].Cells[j].Value + ",";
+                        File.Delete(path);
                     }
-                    else
+
+                    // Форматируйте строки из DataGridView и записывайте в файл
+                    StringBuilder sb = new StringBuilder();
+                    sb.AppendLine("Страна,Столица,Площадь,Экономика,Население,Национальность");
+
+                    int rows = dataGridViewIn_EAA.RowCount;
+                    int columns = dataGridViewIn_EAA.ColumnCount;
+
+                    for (int i = 0; i < rows - 1; i++)
                     {
-                        str = str + dataGridViewIn_EAA.Rows[i].Cells[j].Value;
+                        for (int j = 0; j < columns; j++)
+                        {
+                            sb.Append(dataGridViewIn_EAA.Rows[i].Cells[j].Value);
+
+                            if (j < columns - 1)
+                            {
+                                sb.Append(",");
+                            }
+                        }
+                        sb.AppendLine();
+                    }
+
+                    // Записываем все данные в файл
+                    File.WriteAllText(path, sb.ToString());
+
+                    // Показать сообщение о сохранении и предложить открыть файл в Блокноте
+                    DialogResult dialogres = MessageBox.Show(
+                        $"Файл {Path.GetFileName(path)} сохранен успешно!\nОткрыть его в блокноте?",
+                        "Сообщение",
+                        MessageBoxButtons.YesNo,
+                        MessageBoxIcon.Information
+                    );
+
+                    // Откройте файл в блокноте, если пользователь выбрал "Yes"
+                    if (dialogres == DialogResult.Yes)
+                    {
+                        try
+                        {
+                            Process txt = new Process();
+                            txt.StartInfo.FileName = "notepad.exe";
+                            txt.StartInfo.Arguments = path;
+                            txt.Start();
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show($"Ошибка при открытии файла в блокноте: {ex.Message}", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                     }
                 }
-                File.AppendAllText(path, str + Environment.NewLine);
-                str = "";
-            }
-
-            DialogResult dialogres = MessageBox.Show("Файл " + path + " сохранен успешно!\nОткрыть его в блокноте?", "Сообщение", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
-
-            if (dialogres == DialogResult.Yes) //открытие файла
-            {
-                System.Diagnostics.Process txt = new System.Diagnostics.Process();
-                txt.StartInfo.FileName = "notepad.exe";
-                txt.StartInfo.Arguments = path;
-                txt.Start();
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Ошибка при сохранении файла: {ex.Message}", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
         private void buttonHelp_SBI_Click(object sender, EventArgs e)
